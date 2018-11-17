@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Otp.swift
 //  Roschat
 //
 //  Created by Кирилл Володин on 17/11/2018.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct User: Decodable {
-    let accessToken: String
+struct Otp: Decodable {
+    let otp: Int
 }

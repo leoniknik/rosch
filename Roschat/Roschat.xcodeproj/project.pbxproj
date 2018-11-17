@@ -24,6 +24,12 @@
 		CA34F70A21A0207A00714829 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F70821A0207A00714829 /* ButtonCell.swift */; };
 		CA34F70B21A0207A00714829 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA34F70921A0207A00714829 /* ButtonCell.xib */; };
 		CA34F70D21A023B000714829 /* ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F70C21A023B000714829 /* ButtonViewModel.swift */; };
+		CA34F71021A031D600714829 /* AuthCardConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F70F21A031D600714829 /* AuthCardConfig.swift */; };
+		CA34F71421A034F700714829 /* Otp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F71321A034F700714829 /* Otp.swift */; };
+		CA34F71621A0402700714829 /* AuthCardConfigByOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F71521A0402700714829 /* AuthCardConfigByOtp.swift */; };
+		CA34F71921A0491700714829 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F71721A0491700714829 /* LoginViewController.swift */; };
+		CA34F71A21A0491700714829 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA34F71821A0491700714829 /* LoginViewController.xib */; };
+		CA34F71C21A04A8000714829 /* LoginPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F71B21A04A8000714829 /* LoginPresentationModel.swift */; };
 		CA5A3EBE219F862C0058A025 /* RxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3EBD219F862C0058A025 /* RxColor.swift */; };
 		CA5A3EC0219F88700058A025 /* RxFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3EBF219F88700058A025 /* RxFont.swift */; };
 		CA5A3EC3219F917E0058A025 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3EC1219F917E0058A025 /* FormViewController.swift */; };
@@ -71,6 +77,12 @@
 		CA34F70821A0207A00714829 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		CA34F70921A0207A00714829 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		CA34F70C21A023B000714829 /* ButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModel.swift; sourceTree = "<group>"; };
+		CA34F70F21A031D600714829 /* AuthCardConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCardConfig.swift; sourceTree = "<group>"; };
+		CA34F71321A034F700714829 /* Otp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Otp.swift; sourceTree = "<group>"; };
+		CA34F71521A0402700714829 /* AuthCardConfigByOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCardConfigByOtp.swift; sourceTree = "<group>"; };
+		CA34F71721A0491700714829 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CA34F71821A0491700714829 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		CA34F71B21A04A8000714829 /* LoginPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentationModel.swift; sourceTree = "<group>"; };
 		CA5A3EBD219F862C0058A025 /* RxColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxColor.swift; sourceTree = "<group>"; };
 		CA5A3EBF219F88700058A025 /* RxFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFont.swift; sourceTree = "<group>"; };
 		CA5A3EC1219F917E0058A025 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +188,16 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		CA34F70E21A030CC00714829 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CA34F71721A0491700714829 /* LoginViewController.swift */,
+				CA34F71821A0491700714829 /* LoginViewController.xib */,
+				CA34F71B21A04A8000714829 /* LoginPresentationModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		CA5A3EC7219F924D0058A025 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				CA8DB449219F716500212C6A /* RxKit */,
+				CA34F70E21A030CC00714829 /* Auth */,
 				CABA00D4219F5D6800B52FBE /* Chat */,
 			);
 			path = Presentation;
@@ -285,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				CABA00E3219F692E00B52FBE /* User.swift */,
+				CA34F71321A034F700714829 /* Otp.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -337,6 +361,8 @@
 			isa = PBXGroup;
 			children = (
 				CABA00DB219F622500B52FBE /* RequestConfig.swift */,
+				CA34F70F21A031D600714829 /* AuthCardConfig.swift */,
+				CA34F71521A0402700714829 /* AuthCardConfigByOtp.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -422,6 +448,7 @@
 				CA34F70B21A0207A00714829 /* ButtonCell.xib in Resources */,
 				CABA00E8219F6D4400B52FBE /* ChatViewController.xib in Resources */,
 				CA34F6EE219FFD0A00714829 /* TextCell.xib in Resources */,
+				CA34F71A21A0491700714829 /* LoginViewController.xib in Resources */,
 				CA6772EC219FE72300E385BB /* SwitchCell.xib in Resources */,
 				CA883445219FA16C00BD3D10 /* Default-568h@2x.png in Resources */,
 				CA34F70421A0184400714829 /* PickerCell.xib in Resources */,
@@ -525,8 +552,11 @@
 				CA883443219FA11800BD3D10 /* UIView+UIView_Load.m in Sources */,
 				CABA00D8219F5EA000B52FBE /* ServiceLayer.swift in Sources */,
 				CA34F6ED219FFD0A00714829 /* TextCell.swift in Sources */,
+				CA34F71C21A04A8000714829 /* LoginPresentationModel.swift in Sources */,
 				CA34F70A21A0207A00714829 /* ButtonCell.swift in Sources */,
+				CA34F71621A0402700714829 /* AuthCardConfigByOtp.swift in Sources */,
 				CA34F6FC21A008F900714829 /* DateCell.swift in Sources */,
+				CA34F71421A034F700714829 /* Otp.swift in Sources */,
 				CA6772EB219FE72300E385BB /* SwitchCell.swift in Sources */,
 				CABA00E4219F692E00B52FBE /* User.swift in Sources */,
 				CA34F70321A0184400714829 /* PickerCell.swift in Sources */,
@@ -536,10 +566,12 @@
 				CABA00BA219F558C00B52FBE /* AppDelegate.swift in Sources */,
 				CABA00DE219F62E900B52FBE /* ChatService.swift in Sources */,
 				CA5A3EC6219F91BE0058A025 /* FormPresentationModel.swift in Sources */,
+				CA34F71021A031D600714829 /* AuthCardConfig.swift in Sources */,
 				CABA00E7219F6D4400B52FBE /* ChatViewController.swift in Sources */,
 				CA34F70621A01A3900714829 /* PickerViewModel.swift in Sources */,
 				CABA00E2219F633500B52FBE /* TokenService.swift in Sources */,
 				CA8DB448219F6E4A00212C6A /* ChatPresentationModel.swift in Sources */,
+				CA34F71921A0491700714829 /* LoginViewController.swift in Sources */,
 				CA5A3EC9219F92680058A025 /* FieldViewModel.swift in Sources */,
 				CA34F6F121A000C300714829 /* InputViewModel.swift in Sources */,
 				CA34F6F521A003FE00714829 /* InfoCell.swift in Sources */,
@@ -686,7 +718,10 @@
 				DEVELOPMENT_TEAM = BZ5C8942NC;
 				INFOPLIST_FILE = Roschat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BMSTU.Roschat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Roschat/Classes/Common/Roschat-Bridging-Header.h";
@@ -706,7 +741,10 @@
 				DEVELOPMENT_TEAM = BZ5C8942NC;
 				INFOPLIST_FILE = Roschat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BMSTU.Roschat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Roschat/Classes/Common/Roschat-Bridging-Header.h";

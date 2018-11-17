@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class RequestConfig<Parser> where Parser: Decodable {
-    var baseURL = ""
+    var baseURL = "http://192.168.0.11"
     var url: String
     var endPoint: String
     var parameters: Parameters
