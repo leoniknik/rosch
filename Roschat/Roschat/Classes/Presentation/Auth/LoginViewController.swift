@@ -92,7 +92,7 @@ final class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     
     private func validateForm() {
         signInButton.isEnabled = false
-        
+        cardNumberTextField.text = "3428 4297 6661 937"
         cardNumberSubject.asObservable().bind { [weak self] (cardNumber) in
             if cardNumber.count == 16 {
                 self?.signInButton.isEnabled = true

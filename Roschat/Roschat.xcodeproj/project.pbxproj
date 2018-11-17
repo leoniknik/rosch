@@ -33,6 +33,8 @@
 		CA34F71F21A0591E00714829 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F71E21A0591E00714829 /* Parser.swift */; };
 		CA34F72121A0594400714829 /* UserParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F72021A0594400714829 /* UserParser.swift */; };
 		CA34F72321A0594E00714829 /* OtpParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F72221A0594E00714829 /* OtpParser.swift */; };
+		CA34F72B21A09BEE00714829 /* InTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F72921A09BEE00714829 /* InTextMessageCell.swift */; };
+		CA34F72C21A09BEE00714829 /* InTextMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA34F72A21A09BEE00714829 /* InTextMessageCell.xib */; };
 		CA5A3EBE219F862C0058A025 /* RxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3EBD219F862C0058A025 /* RxColor.swift */; };
 		CA5A3EC0219F88700058A025 /* RxFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3EBF219F88700058A025 /* RxFont.swift */; };
 		CA5A3EC3219F917E0058A025 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3EC1219F917E0058A025 /* FormViewController.swift */; };
@@ -99,6 +101,8 @@
 		CA34F71E21A0591E00714829 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		CA34F72021A0594400714829 /* UserParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserParser.swift; sourceTree = "<group>"; };
 		CA34F72221A0594E00714829 /* OtpParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpParser.swift; sourceTree = "<group>"; };
+		CA34F72921A09BEE00714829 /* InTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTextMessageCell.swift; sourceTree = "<group>"; };
+		CA34F72A21A09BEE00714829 /* InTextMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InTextMessageCell.xib; sourceTree = "<group>"; };
 		CA5A3EBD219F862C0058A025 /* RxColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxColor.swift; sourceTree = "<group>"; };
 		CA5A3EBF219F88700058A025 /* RxFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFont.swift; sourceTree = "<group>"; };
 		CA5A3EC1219F917E0058A025 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +236,31 @@
 				CA34F72221A0594E00714829 /* OtpParser.swift */,
 			);
 			name = Parser;
+			sourceTree = "<group>";
+		};
+		CA34F72821A09B8C00714829 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CA34F72E21A09BFC00714829 /* Outcome */,
+				CA34F72D21A09BF200714829 /* Income  */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CA34F72D21A09BF200714829 /* Income  */ = {
+			isa = PBXGroup;
+			children = (
+				CA34F72921A09BEE00714829 /* InTextMessageCell.swift */,
+				CA34F72A21A09BEE00714829 /* InTextMessageCell.xib */,
+			);
+			path = "Income ";
+			sourceTree = "<group>";
+		};
+		CA34F72E21A09BFC00714829 /* Outcome */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Outcome;
 			sourceTree = "<group>";
 		};
 		CA5A3EC7219F924D0058A025 /* ViewModel */ = {
@@ -384,6 +413,7 @@
 		CABA00D4219F5D6800B52FBE /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				CA34F72821A09B8C00714829 /* Cell */,
 				CA5A3EC7219F924D0058A025 /* ViewModel */,
 				CABA00E5219F6D4400B52FBE /* ChatViewController.swift */,
 				CABA00E6219F6D4400B52FBE /* ChatViewController.xib */,
@@ -511,6 +541,7 @@
 				CA34F70B21A0207A00714829 /* ButtonCell.xib in Resources */,
 				CABA00E8219F6D4400B52FBE /* ChatViewController.xib in Resources */,
 				CA34F6EE219FFD0A00714829 /* TextCell.xib in Resources */,
+				CA34F72C21A09BEE00714829 /* InTextMessageCell.xib in Resources */,
 				CA34F71A21A0491700714829 /* LoginViewController.xib in Resources */,
 				CA6772EC219FE72300E385BB /* SwitchCell.xib in Resources */,
 				CA883445219FA16C00BD3D10 /* Default-568h@2x.png in Resources */,
@@ -643,6 +674,7 @@
 				CABA00BA219F558C00B52FBE /* AppDelegate.swift in Sources */,
 				CABA00DE219F62E900B52FBE /* ChatService.swift in Sources */,
 				CA5A3EC6219F91BE0058A025 /* FormPresentationModel.swift in Sources */,
+				CA34F72B21A09BEE00714829 /* InTextMessageCell.swift in Sources */,
 				CA34F71021A031D600714829 /* AuthCardConfig.swift in Sources */,
 				CABA00E7219F6D4400B52FBE /* ChatViewController.swift in Sources */,
 				CA34F70621A01A3900714829 /* PickerViewModel.swift in Sources */,
@@ -798,7 +830,10 @@
 				DEVELOPMENT_TEAM = BZ5C8942NC;
 				INFOPLIST_FILE = Roschat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BMSTU.Roschat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Roschat/Classes/Common/Roschat-Bridging-Header.h";
@@ -818,7 +853,10 @@
 				DEVELOPMENT_TEAM = BZ5C8942NC;
 				INFOPLIST_FILE = Roschat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BMSTU.Roschat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Roschat/Classes/Common/Roschat-Bridging-Header.h";
