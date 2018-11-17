@@ -30,6 +30,9 @@
 		CA34F71921A0491700714829 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F71721A0491700714829 /* LoginViewController.swift */; };
 		CA34F71A21A0491700714829 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA34F71821A0491700714829 /* LoginViewController.xib */; };
 		CA34F71C21A04A8000714829 /* LoginPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F71B21A04A8000714829 /* LoginPresentationModel.swift */; };
+		CA34F71F21A0591E00714829 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F71E21A0591E00714829 /* Parser.swift */; };
+		CA34F72121A0594400714829 /* UserParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F72021A0594400714829 /* UserParser.swift */; };
+		CA34F72321A0594E00714829 /* OtpParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F72221A0594E00714829 /* OtpParser.swift */; };
 		CA5A3EBE219F862C0058A025 /* RxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3EBD219F862C0058A025 /* RxColor.swift */; };
 		CA5A3EC0219F88700058A025 /* RxFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3EBF219F88700058A025 /* RxFont.swift */; };
 		CA5A3EC3219F917E0058A025 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3EC1219F917E0058A025 /* FormViewController.swift */; };
@@ -96,6 +99,9 @@
 		CA34F71721A0491700714829 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA34F71821A0491700714829 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		CA34F71B21A04A8000714829 /* LoginPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentationModel.swift; sourceTree = "<group>"; };
+		CA34F71E21A0591E00714829 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		CA34F72021A0594400714829 /* UserParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserParser.swift; sourceTree = "<group>"; };
+		CA34F72221A0594E00714829 /* OtpParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpParser.swift; sourceTree = "<group>"; };
 		CA5A3EBD219F862C0058A025 /* RxColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxColor.swift; sourceTree = "<group>"; };
 		CA5A3EBF219F88700058A025 /* RxFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFont.swift; sourceTree = "<group>"; };
 		CA5A3EC1219F917E0058A025 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +230,16 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		CA34F71D21A058A700714829 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				CA34F71E21A0591E00714829 /* Parser.swift */,
+				CA34F72021A0594400714829 /* UserParser.swift */,
+				CA34F72221A0594E00714829 /* OtpParser.swift */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
 		CA5A3EC7219F924D0058A025 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +322,7 @@
 		CABA00CD219F5CDF00B52FBE /* Buisness logic */ = {
 			isa = PBXGroup;
 			children = (
+				CA34F71D21A058A700714829 /* Parser */,
 				CABA00D6219F5DF600B52FBE /* Service */,
 				CABA00D5219F5DEF00B52FBE /* Request */,
 				CABA00D7219F5EA000B52FBE /* ServiceLayer.swift */,
@@ -445,6 +462,7 @@
 				CABA00B3219F558C00B52FBE /* Frameworks */,
 				CABA00B4219F558C00B52FBE /* Resources */,
 				F0DED29B0AD3184528ECCC48 /* [CP] Embed Pods Frameworks */,
+				68B5836B92CEB3E52232C1C0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -530,6 +548,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		68B5836B92CEB3E52232C1C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Roschat/Pods-Roschat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F0DED29B0AD3184528ECCC48 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -608,12 +641,14 @@
 				DEA7DE5421A0325C005E7ABD /* FormFieldDto.swift in Sources */,
 				CA6772EB219FE72300E385BB /* SwitchCell.swift in Sources */,
 				CABA00E4219F692E00B52FBE /* User.swift in Sources */,
+				CA34F72321A0594E00714829 /* OtpParser.swift in Sources */,
 				CA34F70321A0184400714829 /* PickerCell.swift in Sources */,
 				DEA7DE6C21A0567A005E7ABD /* GetDialogStateConfig.swift in Sources */,
 				CA34F6FF21A0095900714829 /* DateViewModel.swift in Sources */,
 				CA883447219FA2DC00BD3D10 /* UIVIew+Load.swift in Sources */,
 				DEA7DE6021A0343C005E7ABD /* SliderFieldDto.swift in Sources */,
 				CA34F6F821A0057400714829 /* InfoViewModel.swift in Sources */,
+				CA34F72121A0594400714829 /* UserParser.swift in Sources */,
 				CABA00BA219F558C00B52FBE /* AppDelegate.swift in Sources */,
 				CABA00DE219F62E900B52FBE /* ChatService.swift in Sources */,
 				CA5A3EC6219F91BE0058A025 /* FormPresentationModel.swift in Sources */,
@@ -628,6 +663,7 @@
 				CA5A3EC9219F92680058A025 /* FieldViewModel.swift in Sources */,
 				CA34F6F121A000C300714829 /* InputViewModel.swift in Sources */,
 				CA34F6F521A003FE00714829 /* InfoCell.swift in Sources */,
+				CA34F71F21A0591E00714829 /* Parser.swift in Sources */,
 				DEA7DE5C21A033F6005E7ABD /* MoneyFieldDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

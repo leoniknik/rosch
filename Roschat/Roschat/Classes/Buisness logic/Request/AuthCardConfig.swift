@@ -20,6 +20,6 @@ final class AuthCardConfig: RequestConfig<Otp> {
                    parameters: parameters,
                    method: .post,
                    encoding: JSONEncoding.default,
-                   parser: Otp.self)
+                   parser: OtpParser())
     }
 }

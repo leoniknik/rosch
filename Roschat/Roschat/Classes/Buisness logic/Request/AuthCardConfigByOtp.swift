@@ -21,6 +21,6 @@ final class AuthCardConfigByOtp: RequestConfig<User> {
                    parameters: parameters,
                    method: .post,
                    encoding: JSONEncoding.default,
-                   parser: User.self)
+                   parser: UserParser())
     }
 }
