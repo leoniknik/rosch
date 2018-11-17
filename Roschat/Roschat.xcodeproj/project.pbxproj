@@ -65,6 +65,9 @@
 		DEA7DE6221A0353E005E7ABD /* SwitchFieldDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6121A0353E005E7ABD /* SwitchFieldDto.swift */; };
 		DEA7DE6421A03908005E7ABD /* TextFormFieldDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6321A03908005E7ABD /* TextFormFieldDto.swift */; };
 		DEA7DE6621A039A8005E7ABD /* FormDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6521A039A8005E7ABD /* FormDto.swift */; };
+		DEA7DE6821A05569005E7ABD /* DialogStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6721A05568005E7ABD /* DialogStateService.swift */; };
+		DEA7DE6A21A055DA005E7ABD /* DialogStateDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6921A055DA005E7ABD /* DialogStateDto.swift */; };
+		DEA7DE6C21A0567A005E7ABD /* GetDialogStateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6B21A0567A005E7ABD /* GetDialogStateConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +135,9 @@
 		DEA7DE6121A0353E005E7ABD /* SwitchFieldDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchFieldDto.swift; sourceTree = "<group>"; };
 		DEA7DE6321A03908005E7ABD /* TextFormFieldDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormFieldDto.swift; sourceTree = "<group>"; };
 		DEA7DE6521A039A8005E7ABD /* FormDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDto.swift; sourceTree = "<group>"; };
+		DEA7DE6721A05568005E7ABD /* DialogStateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogStateService.swift; sourceTree = "<group>"; };
+		DEA7DE6921A055DA005E7ABD /* DialogStateDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogStateDto.swift; sourceTree = "<group>"; };
+		DEA7DE6B21A0567A005E7ABD /* GetDialogStateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDialogStateConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,6 +390,7 @@
 				CABA00DB219F622500B52FBE /* RequestConfig.swift */,
 				CA34F70F21A031D600714829 /* AuthCardConfig.swift */,
 				CA34F71521A0402700714829 /* AuthCardConfigByOtp.swift */,
+				DEA7DE6B21A0567A005E7ABD /* GetDialogStateConfig.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -395,6 +402,7 @@
 				CABA00DD219F62E900B52FBE /* ChatService.swift */,
 				CABA00DF219F632100B52FBE /* UserService.swift */,
 				CABA00E1219F633500B52FBE /* TokenService.swift */,
+				DEA7DE6721A05568005E7ABD /* DialogStateService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -403,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				DEA7DE5221A0323A005E7ABD /* FormDto */,
+				DEA7DE6921A055DA005E7ABD /* DialogStateDto.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -594,11 +603,13 @@
 				CA34F70A21A0207A00714829 /* ButtonCell.swift in Sources */,
 				CA34F71621A0402700714829 /* AuthCardConfigByOtp.swift in Sources */,
 				CA34F6FC21A008F900714829 /* DateCell.swift in Sources */,
+				DEA7DE6A21A055DA005E7ABD /* DialogStateDto.swift in Sources */,
 				CA34F71421A034F700714829 /* Otp.swift in Sources */,
 				DEA7DE5421A0325C005E7ABD /* FormFieldDto.swift in Sources */,
 				CA6772EB219FE72300E385BB /* SwitchCell.swift in Sources */,
 				CABA00E4219F692E00B52FBE /* User.swift in Sources */,
 				CA34F70321A0184400714829 /* PickerCell.swift in Sources */,
+				DEA7DE6C21A0567A005E7ABD /* GetDialogStateConfig.swift in Sources */,
 				CA34F6FF21A0095900714829 /* DateViewModel.swift in Sources */,
 				CA883447219FA2DC00BD3D10 /* UIVIew+Load.swift in Sources */,
 				DEA7DE6021A0343C005E7ABD /* SliderFieldDto.swift in Sources */,
@@ -613,6 +624,7 @@
 				CABA00E2219F633500B52FBE /* TokenService.swift in Sources */,
 				CA8DB448219F6E4A00212C6A /* ChatPresentationModel.swift in Sources */,
 				CA34F71921A0491700714829 /* LoginViewController.swift in Sources */,
+				DEA7DE6821A05569005E7ABD /* DialogStateService.swift in Sources */,
 				CA5A3EC9219F92680058A025 /* FieldViewModel.swift in Sources */,
 				CA34F6F121A000C300714829 /* InputViewModel.swift in Sources */,
 				CA34F6F521A003FE00714829 /* InfoCell.swift in Sources */,
