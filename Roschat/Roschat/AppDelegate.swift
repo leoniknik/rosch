@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,86 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        setupRootViewController()
+        
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        NVActivityIndicatorView.DEFAULT_TYPE = .orbit
+        NVActivityIndicatorView.DEFAULT_COLOR = .purpleyTwo
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let vc = createLoginViewController()
+        window?.rootViewController = vc
+        window?.makeKeyAndVisible()
         
         return true
     }
     
-    private func setupRootViewController() {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        let navController = setupNavigationViewController()
-        let controller = createFormViewController()
-        
-        navController.viewControllers.append(controller)
-        window?.rootViewController = navController
-        window?.makeKeyAndVisible()
-    }
-    
-    private func setupNavigationViewController() -> UINavigationController {
-        let navController = UINavigationController()
-        navController.navigationBar.isTranslucent = false
-        return navController
-    }
-    
-    private func createChatViewController() -> UIViewController {
-        let model = ChatPresentationModel()
-        let controller = ChatViewController(model: model)
-        return controller
-    }
-    
-    private func createFormViewController() -> UIViewController {
-        
-        var json = """
-{
-"fields":[
-   {
-      "name":"date_picker",
-      "label":"Выберите дату",
-      "hint":null,
-      "enabled":true,
-      "type":"DATE_PICKER",
-      "value":1542461435324
-   },
-   {
-      "name":"label_field",
-      "label":"какой то лейбл",
-      "hint":null,
-      "enabled":true,
-      "type":"LABEL"
-   },
-   {
-      "name":"picker",
-      "label":"picker",
-      "hint":null,
-      "enabled":true,
-      "type":"PICKER",
-      "value":null,
-      "variants":[
-         "value1",
-         "value2",
-         "value3"
-      ]
-   },
-   {
-      "name":"sw",
-      "label":"switch",
-      "hint":null,
-      "enabled":true,
-      "type":"SWITCH",
-      "value":true
-   }
-]
-
-}
-   
-"""
-        let data = json.data(using: .utf8)!
-        guard let a = FormDto(data: data) else {
-            return UIViewController()
-        }
-        let model = FormPresentationModel(dto: a)
-        let controller = FormViewController(model: model)
+    private func createLoginViewController() -> UIViewController {
+        let model = LoginPresentationModel()
+        let controller = LoginViewController(model: model)
         return controller
     }
 
