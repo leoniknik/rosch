@@ -17,12 +17,16 @@ final class ServiceLayer {
     let chatService: ChatService
     let tokenService: TokenService
     let userService: UserService
+    let dialogStateService: DialogStateService
+    let buttonActionService: ButtonActionService
     
     private init() {
         requestSender = RequestSender()
         tokenService = TokenService()
         userService = UserService(requestSender: requestSender, tokenService: tokenService)
         chatService = ChatService(requestSender: requestSender, userService: userService)
+        dialogStateService = DialogStateService(requestSender: requestSender, tokenService: tokenService)
+        buttonActionService = ButtonActionService(requestSender: requestSender, tokenService: tokenService)
     }
     
 }

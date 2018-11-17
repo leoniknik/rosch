@@ -13,7 +13,7 @@ import Foundation
 final class DialogStateService {
     
     typealias GetDialogStateCompletion = ((Result<DialogStateDto>) -> Void)?
-    
+    typealias GetDialogStateHistoryCompletion = ((Result<[HistoryDto]>) -> Void)?
     
     let requestSender: RequestSenderProtocol
     let tokenService: TokenService
@@ -24,24 +24,26 @@ final class DialogStateService {
     }
     
     func getDialogState(completion: GetDialogStateCompletion) {
-        let config = AuthCardConfig(cardNumber: cardNumber)
-        requestSender.request(config: config) { [weak self] (result) in
-            guard let `self` = self else { return }
+        guard let token = tokenService.accessToken else { return }
+        let config = GetDialogStateConfig(token)
+        requestSender.request(config: config) { (result) in
             switch result {
-            case .success(let result):
-                self.authByOtp(otp: result.otp, cardNumber: cardNumber, completion: completion)
+            case .success:
+                DispatchQueue.main.async {
+                    completion?(result)
+                }
             case .error:
                 print("error")
             }
         }
     }
     
-    func authByOtp(otp: Int, cardNumber: String, completion: UserCompletion) {
-        let config = AuthCardConfigByOtp(otp: otp, cardNumber: cardNumber)
+    func getDialogStateHistory(completion: GetDialogStateHistoryCompletion) {
+        guard let token = tokenService.accessToken else { return }
+        let config = GetDialogHistoryConfig(token)
         requestSender.request(config: config) { (result) in
             switch result {
-            case .success(let user):
-                print(user)
+            case .success:
                 DispatchQueue.main.async {
                     completion?(result)
                 }

@@ -23,13 +23,12 @@ enum FormFieldType: String {
 
 
 
-struct FormDto{
+struct FormDto {
     var fields: [FormFieldDto]
-    
-    init?(data: Data) {
-        guard let json = try? JSON(data: data) else { return nil }
+    var id: Int
+    init?(json: JSON) {
         self.fields = [FormFieldDto]()
-        
+        id = json["id"].intValue
         let jsons = json["fields"].arrayValue
         for json in jsons {
             let type = FormFieldType(rawValue: json["type"].stringValue) ?? .undef

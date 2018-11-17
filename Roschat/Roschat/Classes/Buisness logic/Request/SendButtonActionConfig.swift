@@ -1,25 +1,26 @@
 //
-//  GetDialogStateConfig.swift
+//  SendButtonActionConfig.swift
 //  Roschat
 //
 //  Created by Aleksander Evtuhov on 17/11/2018.
 //  Copyright © 2018 Кирилл Володин. All rights reserved.
 //
 
+import Foundation
 
 import Foundation
 import Alamofire
 
-final class GetDialogStateConfig: RequestConfig<DialogStateDto> {
+final class SendButtonActionConfig: RequestConfig<DialogStateDto> {
     
-    init(_ token: String) {
-        let parameters: Parameters = [:]
+    init(_ token: String, endpoint: String, buttonID: Int) {
+        let parameters: Parameters = ["id": buttonID]
         let headers: HTTPHeaders = ["Authorization": "Bearer " + token]
-        super.init(url: "/api/user/ds",
+        super.init(url: endpoint,
                    parameters: parameters,
                    headers: headers,
-                   method: .get,
-                   encoding: URLEncoding.queryString,
+                   method: .post,
+                   encoding: JSONEncoding.default,
                    parser: DialogStateDtoParser())
     }
 }

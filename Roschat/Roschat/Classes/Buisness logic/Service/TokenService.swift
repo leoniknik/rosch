@@ -9,9 +9,9 @@
 import Foundation
 
 class TokenService {
-    static var accessToken: String?
+    var accessToken: String? = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhY2Nlc3MiLCJqdGkiOiIxIiwiYXVkIjoiVVNFUiIsImV4cCI6MTU0MjQ4MDQwNH0.fD-21FrMgAftf9HNEik02NvOn05SXM3__a0iuwsyO-eUdxxOSVtXt0xzT8FGZcNGfmzn1l9I7__pKbuTGlOzUg"
     
-    static func clear() {
-        TokenService.accessToken = nil
+    func clear() {
+        accessToken = nil
     }
 }

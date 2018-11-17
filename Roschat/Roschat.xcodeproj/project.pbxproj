@@ -71,6 +71,20 @@
 		DEA7DE6821A05569005E7ABD /* DialogStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6721A05568005E7ABD /* DialogStateService.swift */; };
 		DEA7DE6A21A055DA005E7ABD /* DialogStateDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6921A055DA005E7ABD /* DialogStateDto.swift */; };
 		DEA7DE6C21A0567A005E7ABD /* GetDialogStateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6B21A0567A005E7ABD /* GetDialogStateConfig.swift */; };
+		DEA7DE6E21A05C51005E7ABD /* DialogStateDtoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6D21A05C51005E7ABD /* DialogStateDtoParser.swift */; };
+		DEA7DE7021A06CDA005E7ABD /* SendButtonActionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6F21A06CDA005E7ABD /* SendButtonActionConfig.swift */; };
+		DEA7DE7221A06D3D005E7ABD /* ButtonActionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE7121A06D3D005E7ABD /* ButtonActionService.swift */; };
+		DEA7DE7721A0726B005E7ABD /* ViewDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE7621A0726B005E7ABD /* ViewDto.swift */; };
+		DEA7DE7921A07AB9005E7ABD /* SelectorViewDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE7821A07AB9005E7ABD /* SelectorViewDto.swift */; };
+		DEA7DE7B21A07AD1005E7ABD /* UrlViewDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE7A21A07AD1005E7ABD /* UrlViewDto.swift */; };
+		DEA7DE7D21A07AE1005E7ABD /* PhotoViewDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE7C21A07AE1005E7ABD /* PhotoViewDto.swift */; };
+		DEA7DE7F21A07B03005E7ABD /* DocViewDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE7E21A07B03005E7ABD /* DocViewDto.swift */; };
+		DEA7DE8121A07EB5005E7ABD /* ViewDtoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE8021A07EB5005E7ABD /* ViewDtoParser.swift */; };
+		DEA7DE8321A083ED005E7ABD /* HistoryDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE8221A083ED005E7ABD /* HistoryDto.swift */; };
+		DEA7DE8521A0877E005E7ABD /* GetDialogHistoryConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE8421A0877E005E7ABD /* GetDialogHistoryConfig.swift */; };
+		DEA7DE8721A08907005E7ABD /* HistoryDtoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE8621A08907005E7ABD /* HistoryDtoParser.swift */; };
+		DEA7DE8921A08FD4005E7ABD /* UserMessageDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE8821A08FD4005E7ABD /* UserMessageDto.swift */; };
+		DEA7DE8B21A09BD7005E7ABD /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE8A21A09BD7005E7ABD /* ChatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +158,20 @@
 		DEA7DE6721A05568005E7ABD /* DialogStateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogStateService.swift; sourceTree = "<group>"; };
 		DEA7DE6921A055DA005E7ABD /* DialogStateDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogStateDto.swift; sourceTree = "<group>"; };
 		DEA7DE6B21A0567A005E7ABD /* GetDialogStateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDialogStateConfig.swift; sourceTree = "<group>"; };
+		DEA7DE6D21A05C51005E7ABD /* DialogStateDtoParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogStateDtoParser.swift; sourceTree = "<group>"; };
+		DEA7DE6F21A06CDA005E7ABD /* SendButtonActionConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendButtonActionConfig.swift; sourceTree = "<group>"; };
+		DEA7DE7121A06D3D005E7ABD /* ButtonActionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonActionService.swift; sourceTree = "<group>"; };
+		DEA7DE7621A0726B005E7ABD /* ViewDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDto.swift; sourceTree = "<group>"; };
+		DEA7DE7821A07AB9005E7ABD /* SelectorViewDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorViewDto.swift; sourceTree = "<group>"; };
+		DEA7DE7A21A07AD1005E7ABD /* UrlViewDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlViewDto.swift; sourceTree = "<group>"; };
+		DEA7DE7C21A07AE1005E7ABD /* PhotoViewDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewDto.swift; sourceTree = "<group>"; };
+		DEA7DE7E21A07B03005E7ABD /* DocViewDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocViewDto.swift; sourceTree = "<group>"; };
+		DEA7DE8021A07EB5005E7ABD /* ViewDtoParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDtoParser.swift; sourceTree = "<group>"; };
+		DEA7DE8221A083ED005E7ABD /* HistoryDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDto.swift; sourceTree = "<group>"; };
+		DEA7DE8421A0877E005E7ABD /* GetDialogHistoryConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDialogHistoryConfig.swift; sourceTree = "<group>"; };
+		DEA7DE8621A08907005E7ABD /* HistoryDtoParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDtoParser.swift; sourceTree = "<group>"; };
+		DEA7DE8821A08FD4005E7ABD /* UserMessageDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessageDto.swift; sourceTree = "<group>"; };
+		DEA7DE8A21A09BD7005E7ABD /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,9 +261,12 @@
 		CA34F71D21A058A700714829 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
+				DEA7DE8021A07EB5005E7ABD /* ViewDtoParser.swift */,
 				CA34F71E21A0591E00714829 /* Parser.swift */,
 				CA34F72021A0594400714829 /* UserParser.swift */,
 				CA34F72221A0594E00714829 /* OtpParser.swift */,
+				DEA7DE6D21A05C51005E7ABD /* DialogStateDtoParser.swift */,
+				DEA7DE8621A08907005E7ABD /* HistoryDtoParser.swift */,
 			);
 			name = Parser;
 			sourceTree = "<group>";
@@ -250,6 +281,7 @@
 				CA34F6FE21A0095900714829 /* DateViewModel.swift */,
 				CA34F70521A01A3900714829 /* PickerViewModel.swift */,
 				CA34F70C21A023B000714829 /* ButtonViewModel.swift */,
+				DEA7DE8A21A09BD7005E7ABD /* ChatViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -408,6 +440,8 @@
 				CA34F70F21A031D600714829 /* AuthCardConfig.swift */,
 				CA34F71521A0402700714829 /* AuthCardConfigByOtp.swift */,
 				DEA7DE6B21A0567A005E7ABD /* GetDialogStateConfig.swift */,
+				DEA7DE6F21A06CDA005E7ABD /* SendButtonActionConfig.swift */,
+				DEA7DE8421A0877E005E7ABD /* GetDialogHistoryConfig.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -420,6 +454,7 @@
 				CABA00DF219F632100B52FBE /* UserService.swift */,
 				CABA00E1219F633500B52FBE /* TokenService.swift */,
 				DEA7DE6721A05568005E7ABD /* DialogStateService.swift */,
+				DEA7DE7121A06D3D005E7ABD /* ButtonActionService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -427,8 +462,10 @@
 		DEA7DE5121A03232005E7ABD /* Dto */ = {
 			isa = PBXGroup;
 			children = (
+				DEA7DE7521A07251005E7ABD /* ViewDto */,
 				DEA7DE5221A0323A005E7ABD /* FormDto */,
 				DEA7DE6921A055DA005E7ABD /* DialogStateDto.swift */,
+				DEA7DE8221A083ED005E7ABD /* HistoryDto.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -448,6 +485,19 @@
 				DEA7DE6521A039A8005E7ABD /* FormDto.swift */,
 			);
 			path = FormDto;
+			sourceTree = "<group>";
+		};
+		DEA7DE7521A07251005E7ABD /* ViewDto */ = {
+			isa = PBXGroup;
+			children = (
+				DEA7DE7621A0726B005E7ABD /* ViewDto.swift */,
+				DEA7DE7821A07AB9005E7ABD /* SelectorViewDto.swift */,
+				DEA7DE7A21A07AD1005E7ABD /* UrlViewDto.swift */,
+				DEA7DE7C21A07AE1005E7ABD /* PhotoViewDto.swift */,
+				DEA7DE7E21A07B03005E7ABD /* DocViewDto.swift */,
+				DEA7DE8821A08FD4005E7ABD /* UserMessageDto.swift */,
+			);
+			path = ViewDto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -617,6 +667,8 @@
 				CA34F6EA219FEDD300714829 /* UIViewController+SetupNavBar.swift in Sources */,
 				CABA00E0219F632100B52FBE /* UserService.swift in Sources */,
 				CA5A3ECB219F93670058A025 /* SwitchViewModel.swift in Sources */,
+				DEA7DE7921A07AB9005E7ABD /* SelectorViewDto.swift in Sources */,
+				DEA7DE7221A06D3D005E7ABD /* ButtonActionService.swift in Sources */,
 				DEA7DE6621A039A8005E7ABD /* FormDto.swift in Sources */,
 				DEA7DE5821A0339F005E7ABD /* LabelFieldDto.swift in Sources */,
 				DEA7DE6421A03908005E7ABD /* TextFormFieldDto.swift in Sources */,
@@ -625,29 +677,39 @@
 				DEA7DE6221A0353E005E7ABD /* SwitchFieldDto.swift in Sources */,
 				CA5A3EC0219F88700058A025 /* RxFont.swift in Sources */,
 				CA34F70D21A023B000714829 /* ButtonViewModel.swift in Sources */,
+				DEA7DE8B21A09BD7005E7ABD /* ChatViewModel.swift in Sources */,
 				DEA7DE5A21A033CC005E7ABD /* NumericFieldDto.swift in Sources */,
 				CABA00DC219F622500B52FBE /* RequestConfig.swift in Sources */,
 				CABA00DA219F5FC000B52FBE /* RequestSender.swift in Sources */,
 				CA883443219FA11800BD3D10 /* UIView+UIView_Load.m in Sources */,
+				DEA7DE8721A08907005E7ABD /* HistoryDtoParser.swift in Sources */,
 				DEA7DE5E21A0341E005E7ABD /* PickerFieldDto.swift in Sources */,
 				CABA00D8219F5EA000B52FBE /* ServiceLayer.swift in Sources */,
 				CA34F6ED219FFD0A00714829 /* TextCell.swift in Sources */,
+				DEA7DE8321A083ED005E7ABD /* HistoryDto.swift in Sources */,
 				CA34F71C21A04A8000714829 /* LoginPresentationModel.swift in Sources */,
+				DEA7DE7F21A07B03005E7ABD /* DocViewDto.swift in Sources */,
 				CA34F70A21A0207A00714829 /* ButtonCell.swift in Sources */,
 				CA34F71621A0402700714829 /* AuthCardConfigByOtp.swift in Sources */,
 				CA34F6FC21A008F900714829 /* DateCell.swift in Sources */,
+				DEA7DE6E21A05C51005E7ABD /* DialogStateDtoParser.swift in Sources */,
 				DEA7DE6A21A055DA005E7ABD /* DialogStateDto.swift in Sources */,
 				CA34F71421A034F700714829 /* Otp.swift in Sources */,
+				DEA7DE8521A0877E005E7ABD /* GetDialogHistoryConfig.swift in Sources */,
 				DEA7DE5421A0325C005E7ABD /* FormFieldDto.swift in Sources */,
 				CA6772EB219FE72300E385BB /* SwitchCell.swift in Sources */,
 				CABA00E4219F692E00B52FBE /* User.swift in Sources */,
 				CA34F72321A0594E00714829 /* OtpParser.swift in Sources */,
+				DEA7DE7B21A07AD1005E7ABD /* UrlViewDto.swift in Sources */,
+				DEA7DE8121A07EB5005E7ABD /* ViewDtoParser.swift in Sources */,
 				CA34F70321A0184400714829 /* PickerCell.swift in Sources */,
 				DEA7DE6C21A0567A005E7ABD /* GetDialogStateConfig.swift in Sources */,
 				CA34F6FF21A0095900714829 /* DateViewModel.swift in Sources */,
 				CA883447219FA2DC00BD3D10 /* UIVIew+Load.swift in Sources */,
 				DEA7DE6021A0343C005E7ABD /* SliderFieldDto.swift in Sources */,
+				DEA7DE7721A0726B005E7ABD /* ViewDto.swift in Sources */,
 				CA34F6F821A0057400714829 /* InfoViewModel.swift in Sources */,
+				DEA7DE7D21A07AE1005E7ABD /* PhotoViewDto.swift in Sources */,
 				CA34F72121A0594400714829 /* UserParser.swift in Sources */,
 				CABA00BA219F558C00B52FBE /* AppDelegate.swift in Sources */,
 				CABA00DE219F62E900B52FBE /* ChatService.swift in Sources */,
@@ -661,7 +723,9 @@
 				CA34F71921A0491700714829 /* LoginViewController.swift in Sources */,
 				DEA7DE6821A05569005E7ABD /* DialogStateService.swift in Sources */,
 				CA5A3EC9219F92680058A025 /* FieldViewModel.swift in Sources */,
+				DEA7DE8921A08FD4005E7ABD /* UserMessageDto.swift in Sources */,
 				CA34F6F121A000C300714829 /* InputViewModel.swift in Sources */,
+				DEA7DE7021A06CDA005E7ABD /* SendButtonActionConfig.swift in Sources */,
 				CA34F6F521A003FE00714829 /* InfoCell.swift in Sources */,
 				CA34F71F21A0591E00714829 /* Parser.swift in Sources */,
 				DEA7DE5C21A033F6005E7ABD /* MoneyFieldDto.swift in Sources */,

@@ -22,23 +22,48 @@ enum DialogMessageStyle: String {
     case normal
 }
 
-struct DialogMessageDto {
-    var body: JSON
-    
-    func getMessage(_ style: DialogMessageStyle) -> String {
-        return body[style.rawValue].string ?? body[DialogMessageStyle.normal.rawValue].string ?? "ОШИБКА ВАРИАНТА ДИАЛОГА"
-    }
+struct ButtonDto: Decodable {
+    var id: Int
+    var text: String
+    var endpoint: String
 }
 
 class DialogStateDto {
     var id: Int
     var type: DialogStateType
-    
+    var messageDto: JSON
     var dialogStyleType: DialogMessageStyle
+    var formDto: FormDto!
+    var views: [ViewDto]?
+    var buttons: [ButtonDto]!
     
-    init(json: JSON) {
+    init?(json: JSON) {
         self.id = json["id"].intValue
         self.type = DialogStateType(rawValue: json["type"].stringValue) ?? .undefined
         self.dialogStyleType = DialogMessageStyle(rawValue: json["style"].stringValue) ?? .normal
+        
+        self.messageDto = json["message"]
+        
+        if self.type == .form {
+            formDto = FormDto(json: json["form"])
+        }
+        
+        if self.type == .button {
+            let decoder = JSONDecoder()
+            
+            guard
+                let data = try? json["buttons"].rawData(),
+                let array = try? decoder.decode([ButtonDto].self, from: data)
+                else { fatalError() }
+            buttons = array;
+        }
+        
+        if let viewsJsonArray = json["view"].array {
+            self.views = ViewDtoParser.parseDtos(jsonArray: viewsJsonArray)
+        }
+    }
+    
+    func getMessage() -> String {
+        return self.messageDto[dialogStyleType.rawValue].string ?? self.messageDto[DialogMessageStyle.normal.rawValue].string ?? "ОШИБКА ВАРИАНТА ДИАЛОГА"
     }
 }

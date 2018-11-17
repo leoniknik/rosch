@@ -14,16 +14,70 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        setupRootViewController()
+        //setupRootViewController()
         UIApplication.shared.statusBarStyle = .lightContent
         
+//        ServiceLayer.shared.dialogStateService.getDialogState { result in
+//            switch result {
+//            case .success(let dto):
+//                self.parseDialogState(dto: dto)
+//            case .error(let error):
+//                print(error)
+//            }
+//        }
+        
+                ServiceLayer.shared.dialogStateService.getDialogStateHistory { result in
+                    switch result {
+                    case .success(let historyDtos):
+                        let lastHistoryDto = historyDtos.last!
+                        let dialogstate = lastHistoryDto.botMessage
+                        self.parseDialogState(dto: dialogstate)
+                    case .error(let error):
+                        print(error)
+                    }
+                }
+
         return true
+    }
+    
+    func parseDialogState(dto: DialogStateDto) {
+        print(dto.id)
+        print(dto.getMessage())
+        
+        if dto.type == .form {
+            var cnt = self.createFormViewController(dto: dto.formDto)
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let navController = self.setupNavigationViewController()
+            navController.viewControllers.append(cnt)
+            self.window?.rootViewController = navController
+            self.window?.makeKeyAndVisible()
+        }
+        
+        if let views = dto.views {
+            for i in views {
+                print(i);
+            }
+        }
+        
+        if dto.type == .button {
+            var button = dto.buttons.first!
+            let endpoint = button.endpoint
+            let id = button.id
+            ServiceLayer.shared.buttonActionService.sendButtonAction(endpoint: endpoint, buttonID: id, completion: { result in
+                switch result {
+                case .success(let dto):
+                    self.parseDialogState(dto: dto)
+                case .error(let error):
+                    print(error)
+                }
+            })
+        }
     }
     
     private func setupRootViewController() {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let navController = setupNavigationViewController()
-        let controller = createFormViewController()
+        let controller = UIViewController()
         
         navController.viewControllers.append(controller)
         window?.rootViewController = navController
@@ -35,6 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navController.navigationBar.isTranslucent = false
         return navController
     }
+
     
     private func createChatViewController() -> UIViewController {
         let model = ChatPresentationModel()
@@ -42,57 +97,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return controller
     }
     
-    private func createFormViewController() -> UIViewController {
-        
-        var json = """
-{
-"fields":[
-   {
-      "name":"date_picker",
-      "label":"Выберите дату",
-      "hint":null,
-      "enabled":true,
-      "type":"DATE_PICKER",
-      "value":1542461435324
-   },
-   {
-      "name":"label_field",
-      "label":"какой то лейбл",
-      "hint":null,
-      "enabled":true,
-      "type":"LABEL"
-   },
-   {
-      "name":"picker",
-      "label":"picker",
-      "hint":null,
-      "enabled":true,
-      "type":"PICKER",
-      "value":null,
-      "variants":[
-         "value1",
-         "value2",
-         "value3"
-      ]
-   },
-   {
-      "name":"sw",
-      "label":"switch",
-      "hint":null,
-      "enabled":true,
-      "type":"SWITCH",
-      "value":true
-   }
-]
-
-}
-   
-"""
-        let data = json.data(using: .utf8)!
-        guard let a = FormDto(data: data) else {
-            return UIViewController()
-        }
-        let model = FormPresentationModel(dto: a)
+    private func createFormViewController(dto: FormDto) -> UIViewController {
+        let model = FormPresentationModel(dto: dto)
         let controller = FormViewController(model: model)
         return controller
     }
