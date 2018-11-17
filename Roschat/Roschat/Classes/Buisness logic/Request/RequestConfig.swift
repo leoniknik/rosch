@@ -9,29 +9,29 @@
 import Foundation
 import Alamofire
 
-class RequestConfig<Parser> where Parser: Decodable {
+class RequestConfig<Model> {
+    
     var baseURL = "http://192.168.0.11"
     var url: String
-    var endPoint: String
     var parameters: Parameters
     var headers: HTTPHeaders
     var method: HTTPMethod
     var encoding: ParameterEncoding
-    var parser: Parser.Type
+    var parser: Parser<Model>
     
     init(url: String = "",
          parameters: Parameters = [:],
          headers: HTTPHeaders = [:],
          method: HTTPMethod = .get,
          encoding: ParameterEncoding = URLEncoding(destination: .methodDependent),
-         parser: Parser.Type) {
+         parser: Parser<Model>) {
         
         self.url = "\(baseURL)\(url)"
-        self.endPoint = url
         self.parameters = parameters
         self.headers = headers
         self.method = method
         self.encoding = encoding
         self.parser = parser
+        
     }
 }
