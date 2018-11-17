@@ -8,4 +8,14 @@
 
 class InputViewModel: FieldViewModel {
     
+    var regexp: String
+    var placeholder: String?
+    var value: String?
+    
+    init(dto: TextFormFieldDto) {
+        self.value = dto.value
+        self.regexp = dto.regexp
+        self.placeholder = dto.placeholder
+        super.init(dto: dto)
+    }
 }

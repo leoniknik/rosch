@@ -17,6 +17,8 @@ class PickerCell: UITableViewCell {
     @IBOutlet weak var pickerLabel: UITextField!
     
     let itemPicker = UIPickerView()
+    var selectedItem: String!
+    var variants: [String] = [String]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,7 +44,12 @@ class PickerCell: UITableViewCell {
     }
     
     func configure(model: PickerViewModel) {
-        
+        self.variants = model.variants
+        guard let value = model.value else {
+            self.selectedItem = variants.first ?? ""
+            return
+        }
+        self.selectedItem = value
     }
     
     @IBAction func pickItem(_ sender: UIButton) {

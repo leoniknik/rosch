@@ -36,6 +36,12 @@ class TextCell: UITableViewCell {
     }
     
     func configure(model: InputViewModel) {
-        
+        titleLabel.text = model.label
+        if let placeholder = model.placeholder {
+            inputTextField.attributedPlaceholder = NSAttributedString(
+                string: placeholder,
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.brownGrey])
+        }
+        inputTextField.isEnabled = model.editable
     }
 }

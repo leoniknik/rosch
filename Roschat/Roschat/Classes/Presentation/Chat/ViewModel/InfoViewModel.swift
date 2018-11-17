@@ -7,5 +7,7 @@
 //
 
 class InfoViewModel: FieldViewModel {
-    
+    init(dto: LabelFieldDto) {
+        super.init(dto: dto)
+    }
 }

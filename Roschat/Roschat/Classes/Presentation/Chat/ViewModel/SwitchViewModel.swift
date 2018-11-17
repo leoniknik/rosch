@@ -9,5 +9,10 @@
 import Foundation
 
 class SwitchViewModel: FieldViewModel {
+    var value: Bool = false
     
+    init(dto: SwitchFieldDto) {
+        value = dto.value
+        super.init(dto: dto)
+    }
 }

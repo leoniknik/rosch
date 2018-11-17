@@ -49,6 +49,16 @@
 		CABA00E4219F692E00B52FBE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA00E3219F692E00B52FBE /* User.swift */; };
 		CABA00E7219F6D4400B52FBE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA00E5219F6D4400B52FBE /* ChatViewController.swift */; };
 		CABA00E8219F6D4400B52FBE /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABA00E6219F6D4400B52FBE /* ChatViewController.xib */; };
+		DEA7DE5421A0325C005E7ABD /* FormFieldDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE5321A0325C005E7ABD /* FormFieldDto.swift */; };
+		DEA7DE5621A03356005E7ABD /* DatePickerFieldDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE5521A03356005E7ABD /* DatePickerFieldDto.swift */; };
+		DEA7DE5821A0339F005E7ABD /* LabelFieldDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE5721A0339F005E7ABD /* LabelFieldDto.swift */; };
+		DEA7DE5A21A033CC005E7ABD /* NumericFieldDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE5921A033CC005E7ABD /* NumericFieldDto.swift */; };
+		DEA7DE5C21A033F6005E7ABD /* MoneyFieldDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE5B21A033F6005E7ABD /* MoneyFieldDto.swift */; };
+		DEA7DE5E21A0341E005E7ABD /* PickerFieldDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE5D21A0341E005E7ABD /* PickerFieldDto.swift */; };
+		DEA7DE6021A0343C005E7ABD /* SliderFieldDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE5F21A0343C005E7ABD /* SliderFieldDto.swift */; };
+		DEA7DE6221A0353E005E7ABD /* SwitchFieldDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6121A0353E005E7ABD /* SwitchFieldDto.swift */; };
+		DEA7DE6421A03908005E7ABD /* TextFormFieldDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6321A03908005E7ABD /* TextFormFieldDto.swift */; };
+		DEA7DE6621A039A8005E7ABD /* FormDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE6521A039A8005E7ABD /* FormDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +110,16 @@
 		CABA00E3219F692E00B52FBE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CABA00E5219F6D4400B52FBE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		CABA00E6219F6D4400B52FBE /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		DEA7DE5321A0325C005E7ABD /* FormFieldDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldDto.swift; sourceTree = "<group>"; };
+		DEA7DE5521A03356005E7ABD /* DatePickerFieldDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerFieldDto.swift; sourceTree = "<group>"; };
+		DEA7DE5721A0339F005E7ABD /* LabelFieldDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFieldDto.swift; sourceTree = "<group>"; };
+		DEA7DE5921A033CC005E7ABD /* NumericFieldDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericFieldDto.swift; sourceTree = "<group>"; };
+		DEA7DE5B21A033F6005E7ABD /* MoneyFieldDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyFieldDto.swift; sourceTree = "<group>"; };
+		DEA7DE5D21A0341E005E7ABD /* PickerFieldDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerFieldDto.swift; sourceTree = "<group>"; };
+		DEA7DE5F21A0343C005E7ABD /* SliderFieldDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderFieldDto.swift; sourceTree = "<group>"; };
+		DEA7DE6121A0353E005E7ABD /* SwitchFieldDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchFieldDto.swift; sourceTree = "<group>"; };
+		DEA7DE6321A03908005E7ABD /* TextFormFieldDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormFieldDto.swift; sourceTree = "<group>"; };
+		DEA7DE6521A039A8005E7ABD /* FormDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +304,7 @@
 		CABA00D0219F5D0C00B52FBE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DEA7DE5121A03232005E7ABD /* Dto */,
 				CABA00E3219F692E00B52FBE /* User.swift */,
 			);
 			path = Model;
@@ -352,6 +373,31 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		DEA7DE5121A03232005E7ABD /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				DEA7DE5221A0323A005E7ABD /* FormDto */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		DEA7DE5221A0323A005E7ABD /* FormDto */ = {
+			isa = PBXGroup;
+			children = (
+				DEA7DE5321A0325C005E7ABD /* FormFieldDto.swift */,
+				DEA7DE5521A03356005E7ABD /* DatePickerFieldDto.swift */,
+				DEA7DE5721A0339F005E7ABD /* LabelFieldDto.swift */,
+				DEA7DE5921A033CC005E7ABD /* NumericFieldDto.swift */,
+				DEA7DE5B21A033F6005E7ABD /* MoneyFieldDto.swift */,
+				DEA7DE5D21A0341E005E7ABD /* PickerFieldDto.swift */,
+				DEA7DE5F21A0343C005E7ABD /* SliderFieldDto.swift */,
+				DEA7DE6121A0353E005E7ABD /* SwitchFieldDto.swift */,
+				DEA7DE6321A03908005E7ABD /* TextFormFieldDto.swift */,
+				DEA7DE6521A039A8005E7ABD /* FormDto.swift */,
+			);
+			path = FormDto;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,7 +410,6 @@
 				CABA00B3219F558C00B52FBE /* Frameworks */,
 				CABA00B4219F558C00B52FBE /* Resources */,
 				F0DED29B0AD3184528ECCC48 /* [CP] Embed Pods Frameworks */,
-				B49A85678E602554B0A58722 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -449,21 +494,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B49A85678E602554B0A58722 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Roschat/Pods-Roschat-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F0DED29B0AD3184528ECCC48 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,6 +513,7 @@
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UIFontComplete/UIFontComplete.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -499,6 +530,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIFontComplete.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,33 +548,43 @@
 				CA34F6EA219FEDD300714829 /* UIViewController+SetupNavBar.swift in Sources */,
 				CABA00E0219F632100B52FBE /* UserService.swift in Sources */,
 				CA5A3ECB219F93670058A025 /* SwitchViewModel.swift in Sources */,
+				DEA7DE6621A039A8005E7ABD /* FormDto.swift in Sources */,
+				DEA7DE5821A0339F005E7ABD /* LabelFieldDto.swift in Sources */,
+				DEA7DE6421A03908005E7ABD /* TextFormFieldDto.swift in Sources */,
 				CA5A3EBE219F862C0058A025 /* RxColor.swift in Sources */,
 				CA5A3EC3219F917E0058A025 /* FormViewController.swift in Sources */,
+				DEA7DE6221A0353E005E7ABD /* SwitchFieldDto.swift in Sources */,
 				CA5A3EC0219F88700058A025 /* RxFont.swift in Sources */,
 				CA34F70D21A023B000714829 /* ButtonViewModel.swift in Sources */,
+				DEA7DE5A21A033CC005E7ABD /* NumericFieldDto.swift in Sources */,
 				CABA00DC219F622500B52FBE /* RequestConfig.swift in Sources */,
 				CABA00DA219F5FC000B52FBE /* RequestSender.swift in Sources */,
 				CA883443219FA11800BD3D10 /* UIView+UIView_Load.m in Sources */,
+				DEA7DE5E21A0341E005E7ABD /* PickerFieldDto.swift in Sources */,
 				CABA00D8219F5EA000B52FBE /* ServiceLayer.swift in Sources */,
 				CA34F6ED219FFD0A00714829 /* TextCell.swift in Sources */,
 				CA34F70A21A0207A00714829 /* ButtonCell.swift in Sources */,
 				CA34F6FC21A008F900714829 /* DateCell.swift in Sources */,
+				DEA7DE5421A0325C005E7ABD /* FormFieldDto.swift in Sources */,
 				CA6772EB219FE72300E385BB /* SwitchCell.swift in Sources */,
 				CABA00E4219F692E00B52FBE /* User.swift in Sources */,
 				CA34F70321A0184400714829 /* PickerCell.swift in Sources */,
 				CA34F6FF21A0095900714829 /* DateViewModel.swift in Sources */,
 				CA883447219FA2DC00BD3D10 /* UIVIew+Load.swift in Sources */,
+				DEA7DE6021A0343C005E7ABD /* SliderFieldDto.swift in Sources */,
 				CA34F6F821A0057400714829 /* InfoViewModel.swift in Sources */,
 				CABA00BA219F558C00B52FBE /* AppDelegate.swift in Sources */,
 				CABA00DE219F62E900B52FBE /* ChatService.swift in Sources */,
 				CA5A3EC6219F91BE0058A025 /* FormPresentationModel.swift in Sources */,
 				CABA00E7219F6D4400B52FBE /* ChatViewController.swift in Sources */,
 				CA34F70621A01A3900714829 /* PickerViewModel.swift in Sources */,
+				DEA7DE5621A03356005E7ABD /* DatePickerFieldDto.swift in Sources */,
 				CABA00E2219F633500B52FBE /* TokenService.swift in Sources */,
 				CA8DB448219F6E4A00212C6A /* ChatPresentationModel.swift in Sources */,
 				CA5A3EC9219F92680058A025 /* FieldViewModel.swift in Sources */,
 				CA34F6F121A000C300714829 /* InputViewModel.swift in Sources */,
 				CA34F6F521A003FE00714829 /* InfoCell.swift in Sources */,
+				DEA7DE5C21A033F6005E7ABD /* MoneyFieldDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,7 +728,10 @@
 				DEVELOPMENT_TEAM = BZ5C8942NC;
 				INFOPLIST_FILE = Roschat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BMSTU.Roschat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Roschat/Classes/Common/Roschat-Bridging-Header.h";
@@ -706,7 +751,10 @@
 				DEVELOPMENT_TEAM = BZ5C8942NC;
 				INFOPLIST_FILE = Roschat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BMSTU.Roschat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Roschat/Classes/Common/Roschat-Bridging-Header.h";
