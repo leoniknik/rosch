@@ -17,6 +17,8 @@ final class AuthCardConfigByOtp: RequestConfig<User> {
             "otp": otp
         ]
         
+//        let headers: HTTPHeaders = ["Authorization": "Bearer " + (TokenService.accessToken ?? "")]
+        
         super.init(url: "/api/auth/user/login",
                    parameters: parameters,
                    method: .post,

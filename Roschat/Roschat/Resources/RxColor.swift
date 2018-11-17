@@ -48,4 +48,8 @@ extension UIColor {
     @nonobjc class var navPurple: UIColor {
         return UIColor(red: 151.0 / 255.0, green: 68.0 / 255.0, blue: 251.0 / 255.0, alpha: 1.0)
     }
+    
+    @nonobjc class var veryLightPink: UIColor {
+        return UIColor(white: 218.0 / 255.0, alpha: 1.0)
+    }
 }

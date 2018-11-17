@@ -23,6 +23,20 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addInfoButton()
+        setupNavBar()
+        navigationItem.title = "Чат"
+    }
+    
+    func addInfoButton() {
+        let infoImage = #imageLiteral(resourceName: "info")
+        infoImage.withRenderingMode(.alwaysTemplate)
+        let infoButton = UIBarButtonItem(image: infoImage, style: .done, target: self, action: #selector(openSettings))
+        navigationItem.setRightBarButton(infoButton, animated: false)
+    }
+    
+    @objc func openSettings() {
+        
     }
 
 }

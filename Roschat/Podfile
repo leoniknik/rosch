@@ -16,5 +16,6 @@ target 'Roschat' do
   pod 'Alamofire'
   pod 'RealmSwift'
   pod 'SwiftyJSON'
+  pod 'NVActivityIndicatorView'
 
 end

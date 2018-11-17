@@ -42,4 +42,16 @@ extension UIFont {
         return UIFont.systemFont(ofSize: 16.0, weight: .light)
     }
     
+    class var textStyle7: UIFont {
+        return UIFont.systemFont(ofSize: 16.0, weight: .semibold)
+    }
+    
+    class var textStyle10: UIFont {
+        return UIFont.systemFont(ofSize: 16.0, weight: .light)
+    }
+    
+    class var textStyle11: UIFont {
+        return UIFont.systemFont(ofSize: 12.0, weight: .light)
+    }
+    
 }
