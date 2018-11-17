@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextCell" rowHeight="80" id="KGk-i7-Jjw" customClass="TextCell" customModule="Roschat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6MK-pY-pBp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="80.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aag-5Y-yLZ">
+                                <rect key="frame" x="0.0" y="35.5" width="320" height="45"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите данные" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cje-eR-vhl">
+                                        <rect key="frame" x="16" y="14" width="288" height="17"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Cje-eR-vhl" firstAttribute="leading" secondItem="aag-5Y-yLZ" secondAttribute="leading" constant="16" id="Tzr-qG-lsS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cje-eR-vhl" secondAttribute="trailing" constant="16" id="Yki-ll-a2l"/>
+                                    <constraint firstItem="Cje-eR-vhl" firstAttribute="centerY" secondItem="aag-5Y-yLZ" secondAttribute="centerY" id="Zbb-7X-lNm"/>
+                                    <constraint firstAttribute="height" constant="45" id="fOA-1w-Cno"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjD-Qg-ArM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="35.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите данные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6np-zf-uie">
+                                        <rect key="frame" x="16" y="10.5" width="288" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6np-zf-uie" firstAttribute="leading" secondItem="LjD-Qg-ArM" secondAttribute="leading" constant="16" id="4dN-ux-Q8v"/>
+                                    <constraint firstAttribute="trailing" secondItem="6np-zf-uie" secondAttribute="trailing" constant="16" id="LXU-3D-DD8"/>
+                                    <constraint firstAttribute="bottom" secondItem="6np-zf-uie" secondAttribute="bottom" constant="4" id="XHP-0o-oia"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LjD-Qg-ArM" firstAttribute="top" secondItem="6MK-pY-pBp" secondAttribute="top" id="6Wf-4i-bgk"/>
+                            <constraint firstAttribute="height" constant="80" id="8zk-xE-05i"/>
+                            <constraint firstItem="aag-5Y-yLZ" firstAttribute="top" secondItem="LjD-Qg-ArM" secondAttribute="bottom" id="RlL-Wu-LWw"/>
+                            <constraint firstAttribute="bottom" secondItem="aag-5Y-yLZ" secondAttribute="bottom" id="UHM-f2-bLK"/>
+                            <constraint firstAttribute="trailing" secondItem="aag-5Y-yLZ" secondAttribute="trailing" id="edm-4J-6aI"/>
+                            <constraint firstAttribute="trailing" secondItem="LjD-Qg-ArM" secondAttribute="trailing" id="elG-5m-MdX"/>
+                            <constraint firstItem="LjD-Qg-ArM" firstAttribute="leading" secondItem="6MK-pY-pBp" secondAttribute="leading" id="nJI-v5-whS"/>
+                            <constraint firstItem="aag-5Y-yLZ" firstAttribute="leading" secondItem="6MK-pY-pBp" secondAttribute="leading" id="rl9-Ad-ZIn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6MK-pY-pBp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5FV-VN-h7Q"/>
+                    <constraint firstAttribute="bottom" secondItem="6MK-pY-pBp" secondAttribute="bottom" id="N2h-Hi-Io1"/>
+                    <constraint firstAttribute="trailing" secondItem="6MK-pY-pBp" secondAttribute="trailing" id="SYX-k8-XWA"/>
+                    <constraint firstItem="6MK-pY-pBp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xVf-wl-MYm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="inputTextField" destination="Cje-eR-vhl" id="Yj3-Ht-beL"/>
+                <outlet property="mainView" destination="aag-5Y-yLZ" id="fDW-JB-KKw"/>
+                <outlet property="titleLabel" destination="6np-zf-uie" id="0vV-km-eMt"/>
+                <outlet property="topView" destination="LjD-Qg-ArM" id="rqL-a7-bzr"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="100.74962518740631"/>
+        </tableViewCell>
+    </objects>
+</document>

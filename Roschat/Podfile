@@ -1,0 +1,20 @@
+target 'Roschat' do
+  use_frameworks!
+  inhibit_all_warnings!
+  
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'Hue'
+  pod 'ATGMediaBrowser', '~> 1.0'
+  pod 'CardIO'
+  pod 'RxSwift', '~> 4.0'
+  pod 'RxCocoa', '~> 4.0'
+  pod 'Locksmith'
+  pod 'InputMask'
+  pod 'UIFontComplete'
+  pod 'PullUpController'
+  pod 'SkeletonView'
+  pod 'Kingfisher'
+  pod 'Alamofire'
+  pod 'RealmSwift'
+
+end
