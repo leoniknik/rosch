@@ -25,7 +25,7 @@ class InfoCell: UITableViewCell {
     }
     
     func configure(model: InfoViewModel) {
-        
+        infoLabel.text = model.label
     }
     
 }

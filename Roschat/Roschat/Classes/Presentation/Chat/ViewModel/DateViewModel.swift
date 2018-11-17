@@ -7,5 +7,10 @@
 //
 
 class DateViewModel: FieldViewModel {
+    var value: Date?
     
+    init(dto: DatePickerFieldDto) {
+        self.value = dto.value
+        super.init(dto: dto)
+    }
 }

@@ -15,7 +15,7 @@ class SwitchCell: UITableViewCell {
     @IBOutlet weak var mainView: UIView!
     
     @IBOutlet weak var valueSwitch: UISwitch!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,8 +26,8 @@ class SwitchCell: UITableViewCell {
         valueSwitch.tintColor = gradientColor
         valueSwitch.onTintColor = gradientColor
         
-        descriptionLabel.font = UIFont.textStyle4
-        descriptionLabel.textColor = .white
+        titleLabel.font = UIFont.textStyle4
+        titleLabel.textColor = .white
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,7 +35,9 @@ class SwitchCell: UITableViewCell {
     }
     
     func configure(model: SwitchViewModel) {
-        
+        valueSwitch.isOn = model.value
+        valueSwitch.isEnabled = model.editable
+        titleLabel.text = model.label
     }
     
 }

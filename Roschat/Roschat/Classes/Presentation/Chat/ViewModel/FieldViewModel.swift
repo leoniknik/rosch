@@ -20,7 +20,36 @@ enum FieldType {
 class FieldViewModel {
     let type: FieldType
     
-    init(type: FieldType) {
-        self.type = type
+    let name: String
+    let label: String
+    var editable: Bool
+    let hint: String?
+    
+    init(dto: FormFieldDto) {
+        switch dto.type {
+        case .text:
+            self.type = .input
+        case .date:
+            self.type = .date
+        case .num:
+            self.type = .input
+        case .label:
+            self.type = .info
+        case .money:
+            fatalError()
+        case .picker:
+            self.type = .picker
+        case .slider:
+            fatalError()
+        case .switcher:
+            self.type = .switchType
+        case .undef:
+            fatalError()
+        }
+        
+        self.name = dto.name
+        self.label = dto.label
+        self.editable = dto.editable
+        self.hint = dto.hint
     }
 }

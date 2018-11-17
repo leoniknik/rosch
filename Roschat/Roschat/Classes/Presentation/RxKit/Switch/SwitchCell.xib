@@ -75,8 +75,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="descriptionLabel" destination="w36-cW-2Ps" id="gqG-hn-CoO"/>
                 <outlet property="mainView" destination="UNP-Pj-9Tw" id="qL4-nW-Hm3"/>
+                <outlet property="titleLabel" destination="w36-cW-2Ps" id="o3V-Rp-rTQ"/>
                 <outlet property="topView" destination="ggz-8V-ldG" id="veS-Z3-7cg"/>
                 <outlet property="valueSwitch" destination="uKt-0o-EY0" id="HDA-Qz-awl"/>
             </connections>

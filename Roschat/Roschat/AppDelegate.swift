@@ -43,16 +43,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func createFormViewController() -> UIViewController {
-        let model = FormPresentationModel()
-        model.viewModels.append(InfoViewModel(type: .info))
-        model.viewModels.append(DateViewModel(type: .date))
-        model.viewModels.append(SwitchViewModel(type: .switchType))
-        model.viewModels.append(InputViewModel(type: .input))
-        model.viewModels.append(SwitchViewModel(type: .switchType))
-        model.viewModels.append(PickerViewModel(type: .picker))
-        model.viewModels.append(InputViewModel(type: .input))
-        model.viewModels.append(InfoViewModel(type: .info))
-        model.viewModels.append(ButtonViewModel(type: .button))
+        
+        var json = """
+{
+"fields":[
+   {
+      "name":"date_picker",
+      "label":"Выберите дату",
+      "hint":null,
+      "enabled":true,
+      "type":"DATE_PICKER",
+      "value":1542461435324
+   },
+   {
+      "name":"label_field",
+      "label":"какой то лейбл",
+      "hint":null,
+      "enabled":true,
+      "type":"LABEL"
+   },
+   {
+      "name":"picker",
+      "label":"picker",
+      "hint":null,
+      "enabled":true,
+      "type":"PICKER",
+      "value":null,
+      "variants":[
+         "value1",
+         "value2",
+         "value3"
+      ]
+   },
+   {
+      "name":"sw",
+      "label":"switch",
+      "hint":null,
+      "enabled":true,
+      "type":"SWITCH",
+      "value":true
+   }
+]
+
+}
+   
+"""
+        let data = json.data(using: .utf8)!
+        guard let a = FormDto(data: data) else {
+            return UIViewController()
+        }
+        let model = FormPresentationModel(dto: a)
         let controller = FormViewController(model: model)
         return controller
     }

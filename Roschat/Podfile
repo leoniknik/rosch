@@ -15,5 +15,6 @@ target 'Roschat' do
   pod 'Kingfisher'
   pod 'Alamofire'
   pod 'RealmSwift'
+  pod 'SwiftyJSON'
 
 end

@@ -19,6 +19,7 @@ class DateCell: UITableViewCell {
     @IBOutlet weak var datePickerButton: UIButton!
     
     let datePicker = UIDatePicker()
+    var isPickerEnabled = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,10 +42,15 @@ class DateCell: UITableViewCell {
     }
     
     func configure(model: DateViewModel) {
-        
+        isPickerEnabled = model.editable
+        guard let date = model.value else { return }
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        dateLabel.text = formatter.string(from: date)
     }
     
     @IBAction func pickDate(_ sender: UIButton) {
+        guard isPickerEnabled else { return }
         datePicker.datePickerMode = .date
         //ToolBar
         let toolbar = UIToolbar()
