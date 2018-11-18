@@ -19,8 +19,10 @@ class ChatViewController: UIViewController {
     private let inDocCell = "\(InDocCell.self)"
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var oneButton: UIButton!
+    //@IBOutlet weak var oneButton: UIButton!
     @IBOutlet weak var buttonStack: UIStackView!
+    
+    var isFirstReload: Bool = true
     
     let model: ChatPresentationModel
     
@@ -39,8 +41,6 @@ class ChatViewController: UIViewController {
         setupNavBar()
         navigationItem.title = "Чат"
         setupTableView()
-//        
-//        setupOneButton()
     }
     
     override func viewDidLayoutSubviews() {
@@ -84,8 +84,10 @@ class ChatViewController: UIViewController {
             buttonStack.removeArrangedSubview(oldButton)
             oldButton.removeFromSuperview()
         }
-        for i in 0..<buttons.count {
-           buttonStack.addArrangedSubview( setupAutoButton(tag: i, buttonTitle: buttons[i].text))
+        if model.currentDialogState.type != .form {
+            for i in 0..<buttons.count {
+                buttonStack.addArrangedSubview( setupAutoButton(tag: i, buttonTitle: buttons[i].text))
+            }
         }
     }
     
@@ -246,8 +248,17 @@ extension ChatViewController: ChatPresentationModelDelegate {
     }
     
     func reloadData() {
-        tableView.reloadData()
-        tableView.scrollToRow(at: IndexPath(row: model.messages.count-1, section: 0), at: .bottom, animated: true)
+        if isFirstReload {
+            isFirstReload = false
+            tableView.reloadData()
+            tableView.layoutIfNeeded()
+            tableView.scrollToRow(at: IndexPath(row: model.messages.count-1, section: 0), at: .bottom, animated: false)
+        } else {
+            isFirstReload = false
+            tableView.reloadData()
+            tableView.layoutIfNeeded()
+            tableView.scrollToRow(at: IndexPath(row: model.messages.count-1, section: 0), at: .bottom, animated: true)
+        }
 
     }
     
