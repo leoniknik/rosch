@@ -13,19 +13,28 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var sectionView: UIView!
     @IBOutlet weak var catalogLabel: UILabel!
     @IBOutlet weak var chooseStyleLabel: UILabel!
-    
     @IBOutlet weak var exitView: UIView!
 
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        return nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Настройка"
         setupNavBar()
         addBackButton()
-        
+        setupUI()
     }
     
     func setupUI() {
-        
+        sectionView.backgroundColor = .black
+        view.backgroundColor = .backgroundBlack
+        exitView.backgroundColor = .black
     }
 
 }

@@ -105,7 +105,8 @@ class ChatViewController: UIViewController {
     }
     
     @objc func openSettings() {
-        
+        let viewcontroller = SettingsViewController()
+        navigationController?.pushViewController(viewcontroller, animated: true)
     }
 
 }

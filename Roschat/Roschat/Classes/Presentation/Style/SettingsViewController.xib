@@ -27,7 +27,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNW-MV-dB3">
                     <rect key="frame" x="0.0" y="53" width="375" height="66"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iaV-T5-7OI">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit" translatesAutoresizingMaskIntoConstraints="NO" id="iaV-T5-7OI">
                             <rect key="frame" x="13" y="22.5" width="21" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="21" id="Asv-T4-Ebv"/>
@@ -89,4 +89,7 @@
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>
     </objects>
+    <resources>
+        <image name="edit" width="21" height="21"/>
+    </resources>
 </document>

@@ -10,6 +10,10 @@
 		C5270F791649F5527256A076 /* Pods_Roschat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E372725D490F9F9411B418 /* Pods_Roschat.framework */; };
 		CA348ECE21A0F5EF007C6BD6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA348ECC21A0F5EF007C6BD6 /* SettingsViewController.swift */; };
 		CA348ECF21A0F5EF007C6BD6 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA348ECD21A0F5EF007C6BD6 /* SettingsViewController.xib */; };
+		CA348ED221A0FC19007C6BD6 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA348ED021A0FC19007C6BD6 /* StyleViewController.swift */; };
+		CA348ED321A0FC19007C6BD6 /* StyleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA348ED121A0FC19007C6BD6 /* StyleViewController.xib */; };
+		CA348ED621A0FDAF007C6BD6 /* StyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA348ED421A0FDAF007C6BD6 /* StyleCell.swift */; };
+		CA348ED721A0FDAF007C6BD6 /* StyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA348ED521A0FDAF007C6BD6 /* StyleCell.xib */; };
 		CA34F6EA219FEDD300714829 /* UIViewController+SetupNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F6E9219FEDD300714829 /* UIViewController+SetupNavBar.swift */; };
 		CA34F6ED219FFD0A00714829 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F6EB219FFD0A00714829 /* TextCell.swift */; };
 		CA34F6EE219FFD0A00714829 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA34F6EC219FFD0A00714829 /* TextCell.xib */; };
@@ -101,6 +105,10 @@
 		9F4D0A76F942DCC9A094F8D1 /* Pods-Roschat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roschat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Roschat/Pods-Roschat.release.xcconfig"; sourceTree = "<group>"; };
 		CA348ECC21A0F5EF007C6BD6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CA348ECD21A0F5EF007C6BD6 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		CA348ED021A0FC19007C6BD6 /* StyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
+		CA348ED121A0FC19007C6BD6 /* StyleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StyleViewController.xib; sourceTree = "<group>"; };
+		CA348ED421A0FDAF007C6BD6 /* StyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleCell.swift; sourceTree = "<group>"; };
+		CA348ED521A0FDAF007C6BD6 /* StyleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StyleCell.xib; sourceTree = "<group>"; };
 		CA34F6E9219FEDD300714829 /* UIViewController+SetupNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SetupNavBar.swift"; sourceTree = "<group>"; };
 		CA34F6EB219FFD0A00714829 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		CA34F6EC219FFD0A00714829 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
@@ -224,6 +232,10 @@
 			children = (
 				CA348ECC21A0F5EF007C6BD6 /* SettingsViewController.swift */,
 				CA348ECD21A0F5EF007C6BD6 /* SettingsViewController.xib */,
+				CA348ED021A0FC19007C6BD6 /* StyleViewController.swift */,
+				CA348ED121A0FC19007C6BD6 /* StyleViewController.xib */,
+				CA348ED421A0FDAF007C6BD6 /* StyleCell.swift */,
+				CA348ED521A0FDAF007C6BD6 /* StyleCell.xib */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -627,6 +639,7 @@
 				CA34F70B21A0207A00714829 /* ButtonCell.xib in Resources */,
 				CABA00E8219F6D4400B52FBE /* ChatViewController.xib in Resources */,
 				CA34F73021A0BA7A00714829 /* Assets.xcassets in Resources */,
+				CA348ED321A0FC19007C6BD6 /* StyleViewController.xib in Resources */,
 				CA34F6EE219FFD0A00714829 /* TextCell.xib in Resources */,
 				CA34F72C21A09BEE00714829 /* InTextMessageCell.xib in Resources */,
 				CA348ECF21A0F5EF007C6BD6 /* SettingsViewController.xib in Resources */,
@@ -634,6 +647,7 @@
 				CA6772EC219FE72300E385BB /* SwitchCell.xib in Resources */,
 				CA883445219FA16C00BD3D10 /* Default-568h@2x.png in Resources */,
 				CA34F70421A0184400714829 /* PickerCell.xib in Resources */,
+				CA348ED721A0FDAF007C6BD6 /* StyleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,6 +783,7 @@
 				CA34F70321A0184400714829 /* PickerCell.swift in Sources */,
 				DEA7DE6C21A0567A005E7ABD /* GetDialogStateConfig.swift in Sources */,
 				CA34F6FF21A0095900714829 /* DateViewModel.swift in Sources */,
+				CA348ED621A0FDAF007C6BD6 /* StyleCell.swift in Sources */,
 				CA883447219FA2DC00BD3D10 /* UIVIew+Load.swift in Sources */,
 				DEA7DE6021A0343C005E7ABD /* SliderFieldDto.swift in Sources */,
 				DEA7DE7721A0726B005E7ABD /* ViewDto.swift in Sources */,
@@ -788,6 +803,7 @@
 				CA34F71921A0491700714829 /* LoginViewController.swift in Sources */,
 				DEA7DE6821A05569005E7ABD /* DialogStateService.swift in Sources */,
 				CA5A3EC9219F92680058A025 /* FieldViewModel.swift in Sources */,
+				CA348ED221A0FC19007C6BD6 /* StyleViewController.swift in Sources */,
 				DEA7DE8921A08FD4005E7ABD /* UserMessageDto.swift in Sources */,
 				CA34F6F121A000C300714829 /* InputViewModel.swift in Sources */,
 				CA34F73721A0E35A00714829 /* InDocCell.swift in Sources */,
