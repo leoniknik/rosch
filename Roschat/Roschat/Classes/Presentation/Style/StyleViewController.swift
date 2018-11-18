@@ -72,6 +72,14 @@ extension StyleViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension StyleViewController: StyleCellDelegate {
     func styleTapped(id: Int) {
+        
+        if id == 2 {
+            let alertController = UIAlertController(title: "Функция недоступна", message: "Функция находится в разработке", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alertController,animated: true)
+            return
+        }
+        
         model.styles[id].selected = true
         for (index, _) in model.styles.enumerated() {
             if index != id {

@@ -78,7 +78,8 @@ class StyleCell: UITableViewCell {
     
     @IBAction func selectTapped(_ sender: UIButton) {
         guard let id = id else { return }
-        delegate?.styleTapped(id: id)
+            delegate?.styleTapped(id: id)
+        
     }
     
 }
