@@ -99,6 +99,12 @@
 		DEA7DE8B21A09BD7005E7ABD /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE8A21A09BD7005E7ABD /* ChatViewModel.swift */; };
 		DEA7DEA121A11347005E7ABD /* StyleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DEA021A11347005E7ABD /* StyleViewModel.swift */; };
 		DEA7DEA321A113B4005E7ABD /* StyleSettingsPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DEA221A113B4005E7ABD /* StyleSettingsPresentationModel.swift */; };
+		DEA7DE8D21A0B7B8005E7ABD /* MoneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE8C21A0B7B8005E7ABD /* MoneyViewModel.swift */; };
+		DEA7DE9121A0BA7F005E7ABD /* MoneyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE8F21A0BA7F005E7ABD /* MoneyCell.swift */; };
+		DEA7DE9221A0BA7F005E7ABD /* MoneyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA7DE9021A0BA7F005E7ABD /* MoneyCell.xib */; };
+		DEA7DE9821A0BFC6005E7ABD /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE9621A0BFC6005E7ABD /* SliderCell.swift */; };
+		DEA7DE9921A0BFC6005E7ABD /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA7DE9721A0BFC6005E7ABD /* SliderCell.xib */; };
+		DEA7DE9B21A0C00A005E7ABD /* SliderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DE9A21A0C00A005E7ABD /* SliderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -200,6 +206,12 @@
 		DEA7DE8A21A09BD7005E7ABD /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		DEA7DEA021A11347005E7ABD /* StyleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewModel.swift; sourceTree = "<group>"; };
 		DEA7DEA221A113B4005E7ABD /* StyleSettingsPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSettingsPresentationModel.swift; sourceTree = "<group>"; };
+		DEA7DE8C21A0B7B8005E7ABD /* MoneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyViewModel.swift; sourceTree = "<group>"; };
+		DEA7DE8F21A0BA7F005E7ABD /* MoneyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyCell.swift; sourceTree = "<group>"; };
+		DEA7DE9021A0BA7F005E7ABD /* MoneyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoneyCell.xib; sourceTree = "<group>"; };
+		DEA7DE9621A0BFC6005E7ABD /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		DEA7DE9721A0BFC6005E7ABD /* SliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
+		DEA7DE9A21A0C00A005E7ABD /* SliderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +365,8 @@
 				CA34F70C21A023B000714829 /* ButtonViewModel.swift */,
 				DEA7DE8A21A09BD7005E7ABD /* ChatViewModel.swift */,
 				DEA7DEA021A11347005E7ABD /* StyleViewModel.swift */,
+				DEA7DE8C21A0B7B8005E7ABD /* MoneyViewModel.swift */,
+				DEA7DE9A21A0C00A005E7ABD /* SliderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -360,6 +374,8 @@
 		CA8DB449219F716500212C6A /* RxKit */ = {
 			isa = PBXGroup;
 			children = (
+				DEA7DE9321A0BF81005E7ABD /* Slider */,
+				DEA7DE8E21A0BA49005E7ABD /* Money */,
 				CA34F70721A01FEB00714829 /* Button */,
 				CA34F70021A017C300714829 /* Picker */,
 				CA34F6F921A008C400714829 /* DateField */,
@@ -574,6 +590,24 @@
 			path = ViewDto;
 			sourceTree = "<group>";
 		};
+		DEA7DE8E21A0BA49005E7ABD /* Money */ = {
+			isa = PBXGroup;
+			children = (
+				DEA7DE8F21A0BA7F005E7ABD /* MoneyCell.swift */,
+				DEA7DE9021A0BA7F005E7ABD /* MoneyCell.xib */,
+			);
+			path = Money;
+			sourceTree = "<group>";
+		};
+		DEA7DE9321A0BF81005E7ABD /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				DEA7DE9621A0BFC6005E7ABD /* SliderCell.swift */,
+				DEA7DE9721A0BFC6005E7ABD /* SliderCell.xib */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -639,6 +673,8 @@
 				CABA00C4219F558D00B52FBE /* LaunchScreen.storyboard in Resources */,
 				CA34F73821A0E35A00714829 /* InDocCell.xib in Resources */,
 				CA34F6F621A003FE00714829 /* InfoCell.xib in Resources */,
+				DEA7DE9221A0BA7F005E7ABD /* MoneyCell.xib in Resources */,
+				CABA00C1219F558D00B52FBE /* Assets.xcassets in Resources */,
 				CA34F6FD21A008F900714829 /* DateCell.xib in Resources */,
 				CA5A3EC4219F917E0058A025 /* FormViewController.xib in Resources */,
 				CA34F73421A0BD9900714829 /* MyTextMessageCell.xib in Resources */,
@@ -651,6 +687,7 @@
 				CA348ECF21A0F5EF007C6BD6 /* SettingsViewController.xib in Resources */,
 				CA34F71A21A0491700714829 /* LoginViewController.xib in Resources */,
 				CA6772EC219FE72300E385BB /* SwitchCell.xib in Resources */,
+				DEA7DE9921A0BFC6005E7ABD /* SliderCell.xib in Resources */,
 				CA883445219FA16C00BD3D10 /* Default-568h@2x.png in Resources */,
 				CA34F70421A0184400714829 /* PickerCell.xib in Resources */,
 				CA348ED721A0FDAF007C6BD6 /* StyleCell.xib in Resources */,
@@ -762,6 +799,7 @@
 				DEA7DE8B21A09BD7005E7ABD /* ChatViewModel.swift in Sources */,
 				DEA7DE5A21A033CC005E7ABD /* NumericFieldDto.swift in Sources */,
 				CA34F73321A0BD9900714829 /* MyTextMessageCell.swift in Sources */,
+				DEA7DE8D21A0B7B8005E7ABD /* MoneyViewModel.swift in Sources */,
 				CABA00DC219F622500B52FBE /* RequestConfig.swift in Sources */,
 				CABA00DA219F5FC000B52FBE /* RequestSender.swift in Sources */,
 				CA883443219FA11800BD3D10 /* UIView+UIView_Load.m in Sources */,
@@ -780,6 +818,7 @@
 				CA34F71421A034F700714829 /* Otp.swift in Sources */,
 				DEA7DE8521A0877E005E7ABD /* GetDialogHistoryConfig.swift in Sources */,
 				DEA7DE5421A0325C005E7ABD /* FormFieldDto.swift in Sources */,
+				DEA7DE9121A0BA7F005E7ABD /* MoneyCell.swift in Sources */,
 				CA6772EB219FE72300E385BB /* SwitchCell.swift in Sources */,
 				CABA00E4219F692E00B52FBE /* User.swift in Sources */,
 				CA34F72321A0594E00714829 /* OtpParser.swift in Sources */,
@@ -793,6 +832,8 @@
 				CA883447219FA2DC00BD3D10 /* UIVIew+Load.swift in Sources */,
 				DEA7DE6021A0343C005E7ABD /* SliderFieldDto.swift in Sources */,
 				DEA7DE7721A0726B005E7ABD /* ViewDto.swift in Sources */,
+				DEA7DE9821A0BFC6005E7ABD /* SliderCell.swift in Sources */,
+				DEA7DE9B21A0C00A005E7ABD /* SliderViewModel.swift in Sources */,
 				CA34F6F821A0057400714829 /* InfoViewModel.swift in Sources */,
 				DEA7DE7D21A07AE1005E7ABD /* PhotoViewDto.swift in Sources */,
 				CA34F72121A0594400714829 /* UserParser.swift in Sources */,

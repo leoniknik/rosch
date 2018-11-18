@@ -15,6 +15,8 @@ enum FieldType {
     case date
     case picker
     case button
+    case money
+    case slider
 }
 
 class FieldViewModel {
@@ -36,11 +38,11 @@ class FieldViewModel {
         case .label:
             self.type = .info
         case .money:
-            fatalError()
+            self.type = .money
         case .picker:
             self.type = .picker
         case .slider:
-            fatalError()
+            self.type = .slider
         case .switcher:
             self.type = .switchType
         case .undef:

@@ -23,6 +23,9 @@ class FormViewController: UIViewController {
     let dateCellId = "\(DateCell.self)"
     let pickerCellId = "\(PickerCell.self)"
     let buttonCellId = "\(ButtonCell.self)"
+    let moneyCellId = "\(MoneyCell.self)"
+    let sliderCellId = "\(SliderCell.self)"
+    
     
     let model: FormPresentationModel
     
@@ -61,6 +64,7 @@ class FormViewController: UIViewController {
         tableView.register(UINib(nibName: dateCellId, bundle: nil), forCellReuseIdentifier: dateCellId)
         tableView.register(UINib(nibName: pickerCellId, bundle: nil), forCellReuseIdentifier: pickerCellId)
         tableView.register(UINib(nibName: buttonCellId, bundle: nil), forCellReuseIdentifier: buttonCellId)
+        tableView.register(UINib(nibName: moneyCellId, bundle: nil), forCellReuseIdentifier: moneyCellId)
     }
     
     func createSwitchField(_ tableView: UITableView, model: FieldViewModel) -> UITableViewCell {
@@ -129,6 +133,28 @@ class FormViewController: UIViewController {
         cell.selectionStyle = .none
         return cell
     }
+    
+    func createMoneyField(_ tableView: UITableView, model: FieldViewModel) -> UITableViewCell {
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: moneyCellId) as? MoneyCell,
+            let model = model as? MoneyViewModel
+            else { return UITableViewCell() }
+        
+        cell.configure(model: model)
+        cell.selectionStyle = .none
+        return cell
+    }
+    
+    func createSliderField(_ tableView: UITableView, model: FieldViewModel) -> UITableViewCell {
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: sliderCellId) as? SliderCell,
+            let model = model as? SliderViewModel
+            else { return UITableViewCell() }
+        
+        cell.configure(model: model)
+        cell.selectionStyle = .none
+        return cell
+    }
 }
 
 extension FormViewController: UITableViewDelegate, UITableViewDataSource {
@@ -151,6 +177,11 @@ extension FormViewController: UITableViewDelegate, UITableViewDataSource {
             return createPickerField(tableView, model: viewModel)
         case .button:
             return createButtonField(tableView, model: viewModel)
+        case .money:
+            return createMoneyField(tableView, model: viewModel)
+        case .slider:
+            return createSliderField(tableView, model: viewModel)
+            
         }
     }
     
@@ -169,6 +200,10 @@ extension FormViewController: UITableViewDelegate, UITableViewDataSource {
             return 80
         case .button:
             return 97
+        case .money:
+            return 81
+        case .slider:
+            return 104
         }
     }
 }

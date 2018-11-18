@@ -27,7 +27,8 @@ class FormPresentationModel {
                 guard let dto = fieldDto as? LabelFieldDto else { fatalError() }
                 viewModels.append(InfoViewModel(dto: dto))
             case .money:
-                fatalError()
+                guard let dto = fieldDto as? MoneyFieldDto else { fatalError() }
+                viewModels.append(MoneyViewModel(dto: dto))
             case .picker:
                 guard let dto = fieldDto as? PickerFieldDto else { fatalError() }
                 viewModels.append(PickerViewModel(dto: dto))
