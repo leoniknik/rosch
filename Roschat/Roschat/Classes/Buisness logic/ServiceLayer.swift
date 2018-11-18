@@ -20,6 +20,8 @@ final class ServiceLayer {
     let dialogStateService: DialogStateService
     let buttonActionService: ButtonActionService
     
+    var dialogStyle: DialogMessageStyle = .normal
+    
     private init() {
         requestSender = RequestSender()
         tokenService = TokenService()

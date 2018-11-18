@@ -46,7 +46,8 @@ class DateCell: UITableViewCell {
         guard let date = model.value else { return }
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"
-        dateLabel.text = formatter.string(from: date)
+        dateLabel.text = formatter.string(from: Date())
+        isPickerEnabled = true
     }
     
     @IBAction func pickDate(_ sender: UIButton) {

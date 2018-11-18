@@ -20,6 +20,8 @@ enum DialogStateType: String {
 
 enum DialogMessageStyle: String {
     case normal
+    case girl
+    case gopnik
 }
 
 struct ButtonDto: Decodable {
@@ -67,6 +69,9 @@ class DialogStateDto {
     }
     
     func getMessage() -> String {
-        return self.messageDto[dialogStyleType.rawValue].string ?? self.messageDto[DialogMessageStyle.normal.rawValue].string ?? "ОШИБКА ВАРИАНТА ДИАЛОГА"
+        
+        let style = ServiceLayer.shared.dialogStyle
+        
+        return self.messageDto[style.rawValue].string ?? self.messageDto[DialogMessageStyle.normal.rawValue].string ?? "ОШИБКА ВАРИАНТА ДИАЛОГА"
     }
 }

@@ -79,5 +79,17 @@ extension StyleViewController: StyleCellDelegate {
             }
         }
         tableView.reloadData()
+        
+        switch id {
+        case 0:
+            ServiceLayer.shared.dialogStyle = .normal
+        case 1:
+            ServiceLayer.shared.dialogStyle = .gopnik
+        case 2:
+            ServiceLayer.shared.dialogStyle = .normal
+        default:
+            break
+        }
+        
     }
 }

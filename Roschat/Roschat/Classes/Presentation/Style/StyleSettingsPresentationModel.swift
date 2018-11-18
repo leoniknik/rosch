@@ -13,20 +13,22 @@ class StyleSettingsPresentationModel {
     
     init() {
         self.styles = [StyleViewModel]()
+        let selStyle = ServiceLayer.shared.dialogStyle
+        
         let st1 = StyleViewModel(
-            selected: true,
+            selected: (selStyle == .normal),
             image: #imageLiteral(resourceName: "delo"),
             title: "Бизнесмен",
             text: "Деловой стиль общения, к которому вы привыкли."
         )
         let st2 = StyleViewModel(
-            selected: false,
+            selected: (selStyle == .gopnik),
             image: #imageLiteral(resourceName: "gop"),
             title: "Гопник",
             text: "Дерзкий стиль общения, для четких парней."
         )
         let st3 = StyleViewModel(
-            selected: false,
+            selected: (selStyle == .girl),
             image: #imageLiteral(resourceName: "nya"),
             title: "Ламповая тян",
             text: "Вежливый стиль общения, которому вы захотите оставить деньги."
