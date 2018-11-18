@@ -27,10 +27,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NbI-Ja-a0j">
-                                <rect key="frame" x="61.5" y="10" width="226.5" height="68.5"/>
+                                <rect key="frame" x="232.5" y="10" width="55.5" height="68.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelwiefhowiehfoiwhefoiwehfoiwehfoiwefwejfwljefhljkwenfwefwehfwlebfnwkjlebnfw" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bU-iS-Zbi">
-                                        <rect key="frame" x="8" y="8" width="210.5" height="52.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bU-iS-Zbi">
+                                        <rect key="frame" x="8" y="8" width="39.5" height="52.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Ftf-pL-zFh"/>
@@ -58,7 +58,7 @@
                             <constraint firstItem="NbI-Ja-a0j" firstAttribute="top" secondItem="AIr-Eu-n5D" secondAttribute="top" constant="10" id="acy-5w-EEV"/>
                             <constraint firstItem="NMR-qq-uVN" firstAttribute="width" secondItem="AIr-Eu-n5D" secondAttribute="width" multiplier="0.2" id="bjm-DC-P6Y"/>
                             <constraint firstAttribute="bottom" secondItem="NbI-Ja-a0j" secondAttribute="bottom" constant="10" id="c6t-bw-NAF"/>
-                            <constraint firstItem="NbI-Ja-a0j" firstAttribute="leading" secondItem="NMR-qq-uVN" secondAttribute="trailing" id="rSV-bJ-Ip3"/>
+                            <constraint firstItem="NbI-Ja-a0j" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NMR-qq-uVN" secondAttribute="trailing" id="rSV-bJ-Ip3"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -82,6 +82,7 @@ class ChatViewController: UIViewController {
     func setupButtons(buttons: [ButtonDto]) {
         for oldButton in buttonStack.arrangedSubviews {
             buttonStack.removeArrangedSubview(oldButton)
+            oldButton.removeFromSuperview()
         }
         for i in 0..<buttons.count {
            buttonStack.addArrangedSubview( setupAutoButton(tag: i, buttonTitle: buttons[i].text))
