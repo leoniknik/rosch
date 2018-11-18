@@ -37,4 +37,8 @@ class SettingsViewController: UIViewController {
         exitView.backgroundColor = .black
     }
 
+    @IBAction func styleTapped(_ sender: Any) {
+        var viewcontroller = StyleViewController()
+        navigationController?.pushViewController(viewcontroller, animated: true)
+    }
 }

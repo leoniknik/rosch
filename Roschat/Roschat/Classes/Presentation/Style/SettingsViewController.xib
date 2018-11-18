@@ -48,6 +48,7 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="iaV-T5-7OI" firstAttribute="centerY" secondItem="gNW-MV-dB3" secondAttribute="centerY" id="1ZJ-h7-1KT"/>
                         <constraint firstAttribute="bottom" secondItem="fWx-ZI-eZf" secondAttribute="bottom" constant="14" id="Buf-6p-afc"/>
@@ -57,6 +58,9 @@
                         <constraint firstItem="iaV-T5-7OI" firstAttribute="leading" secondItem="gNW-MV-dB3" secondAttribute="leading" constant="13" id="kSh-av-Or3"/>
                         <constraint firstAttribute="height" constant="66" id="odQ-wA-8mv"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="8FN-ud-7Pm" appends="YES" id="tVy-SQ-ro9"/>
+                    </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIP-0e-6aQ">
                     <rect key="frame" x="0.0" y="588" width="375" height="45"/>
@@ -88,6 +92,11 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>
+        <tapGestureRecognizer id="8FN-ud-7Pm">
+            <connections>
+                <action selector="styleTapped:" destination="-1" id="6CD-hq-Nw3"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="edit" width="21" height="21"/>

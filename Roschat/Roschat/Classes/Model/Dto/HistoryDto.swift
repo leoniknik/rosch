@@ -30,7 +30,11 @@ class HistoryDto {
             self.userTime = json["userTime"].intValue
             self.userMessage = UserMessageDto(json: json["userMessage"])
         }
-        
-        
+    }
+    
+    init(id: Int, botTime: Int, botMessage: DialogStateDto) {
+        self.id = id
+        self.botTime = botTime
+        self.botMessage = botMessage
     }
 }

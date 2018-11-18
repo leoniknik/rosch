@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol FormViewControllerButtonDelegate: class {
+    func buttonPressed(buttonModel: ButtonViewModel)
+}
+
 class FormViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    weak var delegate: FormViewControllerButtonDelegate?
     
     let switchCellId = "\(SwitchCell.self)"
     let inputCellId = "\(TextCell.self)"
@@ -116,10 +121,11 @@ class FormViewController: UIViewController {
     func createButtonField(_ tableView: UITableView, model: FieldViewModel) -> UITableViewCell {
         guard
             let cell = tableView.dequeueReusableCell(withIdentifier: buttonCellId) as? ButtonCell,
-            let model = model as? ButtonViewModel
+            let model = model as? ButtonViewModel,
+            let delegate = delegate
             else { return UITableViewCell() }
         
-        cell.configure(model: model)
+        cell.configure(model: model, delegate: delegate)
         cell.selectionStyle = .none
         return cell
     }

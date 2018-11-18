@@ -52,4 +52,12 @@ class FieldViewModel {
         self.editable = dto.editable
         self.hint = dto.hint
     }
+    
+    init() {
+        self.name = ""
+        self.label = ""
+        self.editable = true
+        self.hint = ""
+        type = .button
+    }
 }
