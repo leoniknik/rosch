@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C5270F791649F5527256A076 /* Pods_Roschat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E372725D490F9F9411B418 /* Pods_Roschat.framework */; };
+		CA348ECE21A0F5EF007C6BD6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA348ECC21A0F5EF007C6BD6 /* SettingsViewController.swift */; };
+		CA348ECF21A0F5EF007C6BD6 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA348ECD21A0F5EF007C6BD6 /* SettingsViewController.xib */; };
 		CA34F6EA219FEDD300714829 /* UIViewController+SetupNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F6E9219FEDD300714829 /* UIViewController+SetupNavBar.swift */; };
 		CA34F6ED219FFD0A00714829 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F6EB219FFD0A00714829 /* TextCell.swift */; };
 		CA34F6EE219FFD0A00714829 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA34F6EC219FFD0A00714829 /* TextCell.xib */; };
@@ -35,6 +37,11 @@
 		CA34F72321A0594E00714829 /* OtpParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F72221A0594E00714829 /* OtpParser.swift */; };
 		CA34F72B21A09BEE00714829 /* InTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F72921A09BEE00714829 /* InTextMessageCell.swift */; };
 		CA34F72C21A09BEE00714829 /* InTextMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA34F72A21A09BEE00714829 /* InTextMessageCell.xib */; };
+		CA34F73021A0BA7A00714829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA34F72F21A0BA7900714829 /* Assets.xcassets */; };
+		CA34F73321A0BD9900714829 /* MyTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F73121A0BD9900714829 /* MyTextMessageCell.swift */; };
+		CA34F73421A0BD9900714829 /* MyTextMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA34F73221A0BD9900714829 /* MyTextMessageCell.xib */; };
+		CA34F73721A0E35A00714829 /* InDocCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34F73521A0E35A00714829 /* InDocCell.swift */; };
+		CA34F73821A0E35A00714829 /* InDocCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA34F73621A0E35A00714829 /* InDocCell.xib */; };
 		CA5A3EBE219F862C0058A025 /* RxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3EBD219F862C0058A025 /* RxColor.swift */; };
 		CA5A3EC0219F88700058A025 /* RxFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3EBF219F88700058A025 /* RxFont.swift */; };
 		CA5A3EC3219F917E0058A025 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3EC1219F917E0058A025 /* FormViewController.swift */; };
@@ -49,7 +56,6 @@
 		CA883447219FA2DC00BD3D10 /* UIVIew+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA883446219FA2DC00BD3D10 /* UIVIew+Load.swift */; };
 		CA8DB448219F6E4A00212C6A /* ChatPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DB447219F6E4A00212C6A /* ChatPresentationModel.swift */; };
 		CABA00BA219F558C00B52FBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA00B9219F558C00B52FBE /* AppDelegate.swift */; };
-		CABA00C1219F558D00B52FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CABA00C0219F558D00B52FBE /* Assets.xcassets */; };
 		CABA00C4219F558D00B52FBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABA00C2219F558D00B52FBE /* LaunchScreen.storyboard */; };
 		CABA00D8219F5EA000B52FBE /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA00D7219F5EA000B52FBE /* ServiceLayer.swift */; };
 		CABA00DA219F5FC000B52FBE /* RequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA00D9219F5FC000B52FBE /* RequestSender.swift */; };
@@ -93,6 +99,8 @@
 		521A7A43DA7C7ED0C8A0F9A1 /* Pods-Roschat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roschat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Roschat/Pods-Roschat.debug.xcconfig"; sourceTree = "<group>"; };
 		88E372725D490F9F9411B418 /* Pods_Roschat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roschat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4D0A76F942DCC9A094F8D1 /* Pods-Roschat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roschat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Roschat/Pods-Roschat.release.xcconfig"; sourceTree = "<group>"; };
+		CA348ECC21A0F5EF007C6BD6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CA348ECD21A0F5EF007C6BD6 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		CA34F6E9219FEDD300714829 /* UIViewController+SetupNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SetupNavBar.swift"; sourceTree = "<group>"; };
 		CA34F6EB219FFD0A00714829 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		CA34F6EC219FFD0A00714829 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
@@ -120,6 +128,11 @@
 		CA34F72221A0594E00714829 /* OtpParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpParser.swift; sourceTree = "<group>"; };
 		CA34F72921A09BEE00714829 /* InTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTextMessageCell.swift; sourceTree = "<group>"; };
 		CA34F72A21A09BEE00714829 /* InTextMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InTextMessageCell.xib; sourceTree = "<group>"; };
+		CA34F72F21A0BA7900714829 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA34F73121A0BD9900714829 /* MyTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextMessageCell.swift; sourceTree = "<group>"; };
+		CA34F73221A0BD9900714829 /* MyTextMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTextMessageCell.xib; sourceTree = "<group>"; };
+		CA34F73521A0E35A00714829 /* InDocCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InDocCell.swift; sourceTree = "<group>"; };
+		CA34F73621A0E35A00714829 /* InDocCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InDocCell.xib; sourceTree = "<group>"; };
 		CA5A3EBD219F862C0058A025 /* RxColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxColor.swift; sourceTree = "<group>"; };
 		CA5A3EBF219F88700058A025 /* RxFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFont.swift; sourceTree = "<group>"; };
 		CA5A3EC1219F917E0058A025 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -137,7 +150,6 @@
 		CA8DB447219F6E4A00212C6A /* ChatPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresentationModel.swift; sourceTree = "<group>"; };
 		CABA00B6219F558C00B52FBE /* Roschat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roschat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABA00B9219F558C00B52FBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CABA00C0219F558D00B52FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CABA00C3219F558D00B52FBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CABA00C5219F558D00B52FBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CABA00D7219F5EA000B52FBE /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
@@ -205,6 +217,15 @@
 				9F4D0A76F942DCC9A094F8D1 /* Pods-Roschat.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CA348ECB21A0F569007C6BD6 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				CA348ECC21A0F5EF007C6BD6 /* SettingsViewController.swift */,
+				CA348ECD21A0F5EF007C6BD6 /* SettingsViewController.xib */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 		CA34F6EF219FFD1B00714829 /* InputText */ = {
@@ -289,6 +310,8 @@
 			children = (
 				CA34F72921A09BEE00714829 /* InTextMessageCell.swift */,
 				CA34F72A21A09BEE00714829 /* InTextMessageCell.xib */,
+				CA34F73521A0E35A00714829 /* InDocCell.swift */,
+				CA34F73621A0E35A00714829 /* InDocCell.xib */,
 			);
 			path = "Income ";
 			sourceTree = "<group>";
@@ -296,6 +319,8 @@
 		CA34F72E21A09BFC00714829 /* Outcome */ = {
 			isa = PBXGroup;
 			children = (
+				CA34F73121A0BD9900714829 /* MyTextMessageCell.swift */,
+				CA34F73221A0BD9900714829 /* MyTextMessageCell.xib */,
 			);
 			path = Outcome;
 			sourceTree = "<group>";
@@ -401,6 +426,7 @@
 		CABA00CF219F5CFC00B52FBE /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CA348ECB21A0F569007C6BD6 /* Style */,
 				CA8DB449219F716500212C6A /* RxKit */,
 				CA34F70E21A030CC00714829 /* Auth */,
 				CABA00D4219F5D6800B52FBE /* Chat */,
@@ -433,7 +459,7 @@
 		CABA00D2219F5D2F00B52FBE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CABA00C0219F558D00B52FBE /* Assets.xcassets */,
+				CA34F72F21A0BA7900714829 /* Assets.xcassets */,
 				CABA00C2219F558D00B52FBE /* LaunchScreen.storyboard */,
 				CA5A3EBD219F862C0058A025 /* RxColor.swift */,
 				CA5A3EBF219F88700058A025 /* RxFont.swift */,
@@ -593,14 +619,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABA00C4219F558D00B52FBE /* LaunchScreen.storyboard in Resources */,
+				CA34F73821A0E35A00714829 /* InDocCell.xib in Resources */,
 				CA34F6F621A003FE00714829 /* InfoCell.xib in Resources */,
-				CABA00C1219F558D00B52FBE /* Assets.xcassets in Resources */,
 				CA34F6FD21A008F900714829 /* DateCell.xib in Resources */,
 				CA5A3EC4219F917E0058A025 /* FormViewController.xib in Resources */,
+				CA34F73421A0BD9900714829 /* MyTextMessageCell.xib in Resources */,
 				CA34F70B21A0207A00714829 /* ButtonCell.xib in Resources */,
 				CABA00E8219F6D4400B52FBE /* ChatViewController.xib in Resources */,
+				CA34F73021A0BA7A00714829 /* Assets.xcassets in Resources */,
 				CA34F6EE219FFD0A00714829 /* TextCell.xib in Resources */,
 				CA34F72C21A09BEE00714829 /* InTextMessageCell.xib in Resources */,
+				CA348ECF21A0F5EF007C6BD6 /* SettingsViewController.xib in Resources */,
 				CA34F71A21A0491700714829 /* LoginViewController.xib in Resources */,
 				CA6772EC219FE72300E385BB /* SwitchCell.xib in Resources */,
 				CA883445219FA16C00BD3D10 /* Default-568h@2x.png in Resources */,
@@ -712,6 +741,7 @@
 				CA34F70D21A023B000714829 /* ButtonViewModel.swift in Sources */,
 				DEA7DE8B21A09BD7005E7ABD /* ChatViewModel.swift in Sources */,
 				DEA7DE5A21A033CC005E7ABD /* NumericFieldDto.swift in Sources */,
+				CA34F73321A0BD9900714829 /* MyTextMessageCell.swift in Sources */,
 				CABA00DC219F622500B52FBE /* RequestConfig.swift in Sources */,
 				CABA00DA219F5FC000B52FBE /* RequestSender.swift in Sources */,
 				CA883443219FA11800BD3D10 /* UIView+UIView_Load.m in Sources */,
@@ -734,6 +764,7 @@
 				CABA00E4219F692E00B52FBE /* User.swift in Sources */,
 				CA34F72321A0594E00714829 /* OtpParser.swift in Sources */,
 				DEA7DE7B21A07AD1005E7ABD /* UrlViewDto.swift in Sources */,
+				CA348ECE21A0F5EF007C6BD6 /* SettingsViewController.swift in Sources */,
 				DEA7DE8121A07EB5005E7ABD /* ViewDtoParser.swift in Sources */,
 				CA34F70321A0184400714829 /* PickerCell.swift in Sources */,
 				DEA7DE6C21A0567A005E7ABD /* GetDialogStateConfig.swift in Sources */,
@@ -759,6 +790,7 @@
 				CA5A3EC9219F92680058A025 /* FieldViewModel.swift in Sources */,
 				DEA7DE8921A08FD4005E7ABD /* UserMessageDto.swift in Sources */,
 				CA34F6F121A000C300714829 /* InputViewModel.swift in Sources */,
+				CA34F73721A0E35A00714829 /* InDocCell.swift in Sources */,
 				DEA7DE7021A06CDA005E7ABD /* SendButtonActionConfig.swift in Sources */,
 				CA34F6F521A003FE00714829 /* InfoCell.swift in Sources */,
 				CA34F71F21A0591E00714829 /* Parser.swift in Sources */,

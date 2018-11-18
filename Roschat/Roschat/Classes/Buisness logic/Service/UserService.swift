@@ -29,7 +29,9 @@ final class UserService {
             case .success(let result):
                 self.authByOtp(otp: result.otp, cardNumber: cardNumber, completion: completion)
             case .error:
-                completion?(Result.error("Ошибка"))
+                DispatchQueue.main.async {
+                    completion?(Result.error("Ошибка"))
+                }
             }
         }
     }
@@ -43,7 +45,9 @@ final class UserService {
                     completion?(result)
                 }
             case .error:
-                completion?(Result.error("Ошибка"))
+                DispatchQueue.main.async {
+                    completion?(Result.error("Ошибка"))
+                }
             }
         }
     }

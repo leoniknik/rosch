@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 final class DialogStateService {
     
     typealias GetDialogStateCompletion = ((Result<DialogStateDto>) -> Void)?
@@ -24,7 +22,7 @@ final class DialogStateService {
     }
     
     func getDialogState(completion: GetDialogStateCompletion) {
-        guard let token = tokenService.accessToken else { return }
+        guard let token = TokenService.accessToken else { return }
         let config = GetDialogStateConfig(token)
         requestSender.request(config: config) { (result) in
             switch result {
@@ -39,7 +37,7 @@ final class DialogStateService {
     }
     
     func getDialogStateHistory(completion: GetDialogStateHistoryCompletion) {
-        guard let token = tokenService.accessToken else { return }
+        guard let token = TokenService.accessToken else { return }
         let config = GetDialogHistoryConfig(token)
         requestSender.request(config: config) { (result) in
             switch result {

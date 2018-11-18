@@ -54,4 +54,16 @@ extension UIFont {
         return UIFont.systemFont(ofSize: 12.0, weight: .light)
     }
     
+    class var textStyle12: UIFont {
+        return UIFont.systemFont(ofSize: 15.0, weight: .regular)
+    }
+    
+    class var textStyle13: UIFont {
+        return UIFont.systemFont(ofSize: 15.0, weight: .regular)
+    }
+    
+    class var textStyle14: UIFont {
+        return UIFont.systemFont(ofSize: 15.0, weight: .bold)
+    }
+    
 }

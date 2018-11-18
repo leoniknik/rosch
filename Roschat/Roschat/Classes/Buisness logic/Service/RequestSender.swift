@@ -53,9 +53,7 @@ final class RequestSender: RequestSenderProtocol {
         }
     }
     
-    
-    
-    
+
     
 //    func request<Model>(config: RequestConfig<Model>, completionHandler: CompletionHandler<Model>) {
 //        let utilityQueue = DispatchQueue.global(qos: .utility)

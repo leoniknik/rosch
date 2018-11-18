@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController" customModule="Roschat" customModuleProvider="target">
             <connections>
+                <outlet property="buttonStack" destination="VOd-j5-NkT" id="Bnr-QP-qIh"/>
+                <outlet property="oneButton" destination="MfN-Ux-EVM" id="Q1n-sb-rYH"/>
+                <outlet property="tableView" destination="FnW-Ul-enN" id="cG1-80-lyG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,18 +24,37 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FnW-Ul-enN">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="572"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-j5-NkT">
+                    <rect key="frame" x="34" y="607" width="307" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfN-Ux-EVM">
+                            <rect key="frame" x="0.0" y="0.0" width="307" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="iKa-6N-BwI"/>
+                            </constraints>
+                            <state key="normal" title="Далее"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="qi0-au-GQh"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="FnW-Ul-enN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AC9-ZJ-jjn"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FnW-Ul-enN" secondAttribute="bottom" id="Btr-MV-Ylz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FnW-Ul-enN" secondAttribute="trailing" id="QVJ-5g-vjY"/>
+                <constraint firstItem="VOd-j5-NkT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="34" id="QxN-n3-IaC"/>
+                <constraint firstItem="VOd-j5-NkT" firstAttribute="top" secondItem="FnW-Ul-enN" secondAttribute="bottom" constant="15" id="UVa-18-Cl7"/>
                 <constraint firstItem="FnW-Ul-enN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hqP-IE-egF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VOd-j5-NkT" secondAttribute="trailing" constant="34" id="hxj-mm-fSw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VOd-j5-NkT" secondAttribute="bottom" constant="15" id="kWc-Do-Pso"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="9" y="46"/>
         </view>
     </objects>
 </document>

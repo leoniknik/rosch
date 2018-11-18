@@ -11,6 +11,7 @@ import InputMask
 import RxCocoa
 import RxSwift
 import NVActivityIndicatorView
+import SafariServices
 
 final class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     

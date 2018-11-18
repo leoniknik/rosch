@@ -21,7 +21,7 @@ final class ButtonActionService {
     }
     
     func sendButtonAction(endpoint: String, buttonID: Int, completion: ButtonActionSendCompletion) {
-        guard let token = tokenService.accessToken else { return }
+        guard let token = TokenService.accessToken else { return }
         let config = SendButtonActionConfig(token, endpoint: endpoint, buttonID: buttonID)
         requestSender.request(config: config) { (result) in
             switch result {

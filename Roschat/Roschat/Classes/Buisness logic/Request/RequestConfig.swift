@@ -10,8 +10,7 @@ import Foundation
 import Alamofire
 
 class RequestConfig<Model> {
-    
-    var baseURL = "http://192.168.0.2:8000"
+    var baseURL = "http://192.168.0.11"
     var url: String
     var parameters: Parameters
     var headers: HTTPHeaders
