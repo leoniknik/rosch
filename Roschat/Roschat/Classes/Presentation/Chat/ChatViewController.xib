@@ -24,14 +24,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FnW-Ul-enN">
-                    <rect key="frame" x="0.0" y="20" width="375" height="572"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="617"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-j5-NkT">
-                    <rect key="frame" x="34" y="607" width="307" height="45"/>
+                    <rect key="frame" x="34" y="652" width="307" height="0.0"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfN-Ux-EVM">
-                            <rect key="frame" x="0.0" y="0.0" width="307" height="45"/>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfN-Ux-EVM">
+                            <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="iKa-6N-BwI"/>
                             </constraints>

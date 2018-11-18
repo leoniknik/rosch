@@ -39,10 +39,14 @@ class ButtonCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configure(model: ButtonViewModel, delegate: FormViewControllerButtonDelegate) {
-        self.delegate = delegate
+    func configure(model: ButtonViewModel) {
+       
         self.setTitle(title: model.title)
         self.model = model
     }
     
+    @IBAction func pressed(_ sender: Any) {
+        
+        model.completion?()
+    }
 }

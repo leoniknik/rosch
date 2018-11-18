@@ -10,6 +10,7 @@ import UIKit
 import ChameleonFramework
 import SafariServices
 import Alamofire
+import NVActivityIndicatorView
 
 class ChatViewController: UIViewController {
 
@@ -38,8 +39,8 @@ class ChatViewController: UIViewController {
         setupNavBar()
         navigationItem.title = "Чат"
         setupTableView()
-        
-        setupOneButton()
+//        
+//        setupOneButton()
     }
     
     override func viewDidLayoutSubviews() {
@@ -56,45 +57,63 @@ class ChatViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(UINib(nibName: inTextMessageCell, bundle: nil), forCellReuseIdentifier: inTextMessageCell)
         tableView.register(UINib(nibName: myTextMessageCell, bundle: nil), forCellReuseIdentifier: myTextMessageCell)
+       
         tableView.register(UINib(nibName: inDocCell, bundle: nil), forCellReuseIdentifier: inDocCell)
     }
     
-    func setupOneButton() {
-        oneButton.setTitleColor(UIColor.purpleyTwo, for: .normal)
-        oneButton.layer.cornerRadius = 20
-        oneButton.clipsToBounds = true
-        oneButton.backgroundColor = .white
-        
-        let attrString = NSAttributedString(
-            string: "Далее",
-            attributes: [
-                NSAttributedString.Key.foregroundColor: UIColor.purpleyTwo,
-                NSAttributedString.Key.font: UIFont.textStyle9
-            ])
-        oneButton.setAttributedTitle(attrString, for: .normal)
-        
-        buttonStack.addArrangedSubview(setupAutoButton())
-        buttonStack.addArrangedSubview(setupAutoButton())
+//    func setupOneButton() {
+//        oneButton.setTitleColor(UIColor.purpleyTwo, for: .normal)
+//        oneButton.layer.cornerRadius = 20
+//        oneButton.clipsToBounds = true
+//        oneButton.backgroundColor = .white
+//
+//        let attrString = NSAttributedString(
+//            string: "Далее",
+//            attributes: [
+//                NSAttributedString.Key.foregroundColor: UIColor.purpleyTwo,
+//                NSAttributedString.Key.font: UIFont.textStyle9
+//            ])
+//        oneButton.setAttributedTitle(attrString, for: .normal)
+//
+//        buttonStack.addArrangedSubview(setupAutoButton())
+//        buttonStack.addArrangedSubview(setupAutoButton())
+//    }
+    
+    func setupButtons(buttons: [ButtonDto]) {
+        for oldButton in buttonStack.arrangedSubviews {
+            buttonStack.removeArrangedSubview(oldButton)
+        }
+        for i in 0..<buttons.count {
+           buttonStack.addArrangedSubview( setupAutoButton(tag: i, buttonTitle: buttons[i].text))
+        }
     }
     
-    func setupAutoButton() -> UIButton {
+    func setupAutoButton(tag: Int, buttonTitle: String) -> UIButton {
         let button = UIButton()
         button.setTitleColor(UIColor.purpleyTwo, for: .normal)
         button.layer.cornerRadius = 20
         button.clipsToBounds = true
         button.backgroundColor = .white
         let attrString = NSAttributedString(
-            string: "Далее",
+            string: buttonTitle,
             attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor.purpleyTwo,
                 NSAttributedString.Key.font: UIFont.textStyle9
             ])
         button.setAttributedTitle(attrString, for: .normal)
-        
+        button.isUserInteractionEnabled = true
         button.translatesAutoresizingMaskIntoConstraints = false
         button.heightAnchor.constraint(equalToConstant: 45).isActive = true
-        
+        button.tag = tag
+//        button.titleLabel?.numberOfLines = 1;
+//        button.titleLabel?.adjustsFontSizeToFitWidth = true;
+//        button.titleLabel?.lineBreakMode = .byClipping;
+        button.addTarget(self, action: #selector(navButtonPressed(_:)), for: .touchUpInside)
         return button
+    }
+    
+    @objc func navButtonPressed(_ sender: UIButton) {
+        model.navButtonPressed(tag: (sender as? UIButton)?.tag ?? 0)
     }
     
     func addInfoButton() {
@@ -108,38 +127,133 @@ class ChatViewController: UIViewController {
         let viewcontroller = SettingsViewController()
         navigationController?.pushViewController(viewcontroller, animated: true)
     }
-
+    
+    func rowTaped(_ id: Int) {
+        
+        guard let type = model.messages[id].type else {
+            return
+        }
+        
+        if type == .inUrl {
+            let m = model.messages[id] as! ChatDocMessageModel
+            let m2 = m.view as! UrlViewDto
+            let url = URL(string: m2.url)!
+            var vc = SFSafariViewController(url: url)
+            present(vc, animated: true)
+        }
+        
+        if type == .inForm {
+            let  messageModel  = model.currentDialogState.formDto
+            var formPresentationModel = FormPresentationModel(dto: messageModel!)
+            let contoller = FormViewController(model: formPresentationModel)
+            formPresentationModel.viewModels.append( ButtonViewModel(title: "Далее", completion: {
+                [weak self] in self?.sendForm()
+            }))
+            navigationController?.pushViewController(contoller, animated: true)
+        }
+        if type == .inDoc {
+            let m = model.messages[id] as! ChatDocMessageModel
+            let m2 = m.view as! DocViewDto
+            
+            var urlS = "http://192.168.0.11/api/test/document?id=\(m2.fileId)"
+            
+            let url = URL(string: urlS)!
+            var vc = SFSafariViewController(url: url)
+            present(vc, animated: true)
+        }
+    }
 }
+
+
+
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return model.messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row < 2 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: inTextMessageCell)
-                as? InTextMessageCell else { return UITableViewCell() }
-            cell.selectionStyle = .none
-            
-            return cell
-        } else if indexPath.row < 4 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: myTextMessageCell)
-                as? MyTextMessageCell else { return UITableViewCell() }
-            cell.selectionStyle = .none
-            return cell
-        } else {
+        
+        let messageModel = model.messages[indexPath.row]
+        guard let messageType = messageModel.type else { return UITableViewCell() }
+        switch messageType {
+        case .inDoc:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: inDocCell)
                 as? InDocCell else { return UITableViewCell() }
             cell.selectionStyle = .none
+            cell.config(model: messageModel as! ChatDocMessageModel)
             return cell
+        case .outDoc:
+            break
+        case .inText:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: inTextMessageCell)
+                as? InTextMessageCell else { return UITableViewCell() }
+            cell.config(model: messageModel as! ChatTextMessageModel)
+            cell.selectionStyle = .none
+            return cell
+        case .outText:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: myTextMessageCell)
+                as? MyTextMessageCell else { return UITableViewCell() }
+            cell.selectionStyle = .none
+            cell.config(model: messageModel as! ChatTextMessageModel)
+            return cell
+        case .inForm:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: inDocCell)
+                as? InDocCell else { return UITableViewCell() }
+            cell.modelForm = messageModel as! ChatFormMessageModel
+            cell.config(model: messageModel as! ChatFormMessageModel)
+            cell.selectionStyle = .none
+            return cell
+        case .outForm:
+            break
+        case .inImage:
+            break
+        case .outImage:
+            break
+        case .inUrl:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: inDocCell)
+                as? InDocCell else { return UITableViewCell() }
+            cell.selectionStyle = .none
+            cell.config(model: messageModel as! ChatDocMessageModel)
+            return cell
+        case .outUrl:
+            break
         }
+        
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        rowTaped(indexPath.row)
+    }
+    
+    func sendForm() {
+        navigationController?.popViewController(animated: true)
+        model.navButtonPressed(tag: 0)
     }
     
 }
 
+extension ChatViewController: ChatPresentationModelDelegate {
+    func blockScreen() {
+        let activityData = ActivityData()
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData, nil)
+    }
+    
+    func unblockscreen() {
+        NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+    }
+    
+    func reloadData() {
+        tableView.reloadData()
+        tableView.scrollToRow(at: IndexPath(row: model.messages.count-1, section: 0), at: .bottom, animated: true)
 
-
+    }
+    
+    func setupNavButtons(buttonsDtos: [ButtonDto]) {
+        setupButtons(buttons: buttonsDtos)
+    }
+}
 
 
 //        guard let url = URL(string: "http://192.168.0.2:8000/api/user/photo") else { return }

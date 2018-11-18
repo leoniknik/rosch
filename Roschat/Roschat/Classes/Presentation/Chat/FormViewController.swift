@@ -47,7 +47,8 @@ class FormViewController: UIViewController {
         setupTableView()
         setupNavBar()
         self.navigationItem.title = "Форма"
-        addСloseButton()
+        addBackButton()
+        
     }
     
     func setupTableView() {
@@ -125,11 +126,10 @@ class FormViewController: UIViewController {
     func createButtonField(_ tableView: UITableView, model: FieldViewModel) -> UITableViewCell {
         guard
             let cell = tableView.dequeueReusableCell(withIdentifier: buttonCellId) as? ButtonCell,
-            let model = model as? ButtonViewModel,
-            let delegate = delegate
+            let model = model as? ButtonViewModel
             else { return UITableViewCell() }
         
-        cell.configure(model: model, delegate: delegate)
+        cell.configure(model: model)
         cell.selectionStyle = .none
         return cell
     }

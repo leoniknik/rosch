@@ -35,4 +35,8 @@ class MyTextMessageCell: UITableViewCell {
         textBackgroundView.backgroundColor = gradientColor
     }
     
+    func config(model: ChatTextMessageModel) {
+        textMessageLabel.text = model.text
+    }
+    
 }

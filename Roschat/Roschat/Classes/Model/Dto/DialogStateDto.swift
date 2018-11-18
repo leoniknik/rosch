@@ -36,6 +36,7 @@ class DialogStateDto {
     var formDto: FormDto!
     var views: [ViewDto]?
     var buttons: [ButtonDto]!
+    var endpoint: String?
     
     init?(json: JSON) {
         self.id = json["id"].intValue
@@ -43,6 +44,8 @@ class DialogStateDto {
         self.dialogStyleType = DialogMessageStyle(rawValue: json["style"].stringValue) ?? .normal
         
         self.messageDto = json["message"]
+        
+        self.endpoint = json["endpoint"].string
         
         if self.type == .form {
             formDto = FormDto(json: json["form"])

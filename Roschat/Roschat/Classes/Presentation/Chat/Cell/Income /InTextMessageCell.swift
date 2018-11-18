@@ -32,4 +32,8 @@ class InTextMessageCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func config(model: ChatTextMessageModel) {
+        self.textMessageLabel.text = model.text
+    }
+    
 }
