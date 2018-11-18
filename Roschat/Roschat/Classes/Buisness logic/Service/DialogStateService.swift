@@ -40,14 +40,9 @@ final class DialogStateService {
         guard let token = TokenService.accessToken else { return }
         let config = GetDialogHistoryConfig(token)
         requestSender.request(config: config) { (result) in
-            switch result {
-            case .success:
                 DispatchQueue.main.async {
                     completion?(result)
                 }
-            case .error:
-                print("error")
-            }
         }
     }
 }

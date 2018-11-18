@@ -28,6 +28,9 @@
                                     <constraint firstAttribute="height" constant="45" id="TkT-Pi-4CQ"/>
                                 </constraints>
                                 <state key="normal" title="Далее"/>
+                                <connections>
+                                    <action selector="pressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uqo-IB-B2q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

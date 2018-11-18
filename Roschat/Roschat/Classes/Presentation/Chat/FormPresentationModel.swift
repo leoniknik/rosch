@@ -10,6 +10,9 @@ import Foundation
 
 class FormPresentationModel {
     var viewModels = [FieldViewModel]()
+    
+    var userAnswer: UserMessageDto?
+    
     var endpoint: String = ""
     
     init(dto: FormDto) {

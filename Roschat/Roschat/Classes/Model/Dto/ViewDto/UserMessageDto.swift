@@ -25,4 +25,11 @@ class UserMessageDto {
             fatalError()
         }
     }
+    init(type: DialogStateType,
+         strValue: String? = nil,
+        jsonValue: JSON? = nil) {
+        self.type = type
+        self.strValue = strValue
+        self.jsonValue = jsonValue
+    }
 }

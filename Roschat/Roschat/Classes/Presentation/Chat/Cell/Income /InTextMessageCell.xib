@@ -23,10 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nK-8z-4WN">
-                                <rect key="frame" x="55" y="10" width="201" height="69.5"/>
+                                <rect key="frame" x="55" y="10" width="199.5" height="69.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelwiefhowiehfoiwhefoiwehfoiwehfoiwefwejfwljefhljkwenfwefwehfwlebfnwkjlebnfw" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhZ-7T-aRF">
-                                        <rect key="frame" x="8" y="8" width="185" height="53.5"/>
+                                        <rect key="frame" x="8" y="8" width="183.5" height="53.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="VdQ-Id-fwi"/>
@@ -64,7 +64,7 @@
                             <constraint firstItem="CN9-eb-84V" firstAttribute="top" secondItem="baR-hG-ogE" secondAttribute="top" id="PDL-Ia-l2L"/>
                             <constraint firstItem="8nK-8z-4WN" firstAttribute="top" secondItem="baR-hG-ogE" secondAttribute="top" constant="10" id="TFa-on-UCg"/>
                             <constraint firstAttribute="bottom" secondItem="HHs-yD-nb0" secondAttribute="bottom" constant="10" id="Ubo-kP-UTe"/>
-                            <constraint firstItem="CN9-eb-84V" firstAttribute="leading" secondItem="8nK-8z-4WN" secondAttribute="trailing" id="iap-Be-Gr0"/>
+                            <constraint firstItem="CN9-eb-84V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8nK-8z-4WN" secondAttribute="trailing" id="iap-Be-Gr0"/>
                             <constraint firstItem="CN9-eb-84V" firstAttribute="width" secondItem="baR-hG-ogE" secondAttribute="width" multiplier="0.2" id="ji0-pl-aYH"/>
                             <constraint firstItem="HHs-yD-nb0" firstAttribute="leading" secondItem="baR-hG-ogE" secondAttribute="leading" constant="11" id="mt5-oh-ben"/>
                             <constraint firstItem="8nK-8z-4WN" firstAttribute="leading" secondItem="HHs-yD-nb0" secondAttribute="trailing" constant="10" id="zoV-sM-gVS"/>

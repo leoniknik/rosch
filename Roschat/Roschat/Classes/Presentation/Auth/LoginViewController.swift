@@ -112,6 +112,9 @@ final class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     }
     
     @IBAction func signin(_ sender: UIButton) {
+//        TokenService.accessToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhY2Nlc3MiLCJqdGkiOiIxIiwiYXVkIjoiVVNFUiIsImV4cCI6MTU0MjU0MzQ5MH0.VuxrJt0dbkOq72BPnR-tfILA_-m0NY2swriNrEoB78D5lqghNfsGLnz4amSGWzem1MRk837NJKwJ0YADNZr9zA"
+//        self.openChat()
+//        return
         guard
             let cardNumber = cardNumberTextField.text?.replacingOccurrences(of: " ", with: ""),
             !cardNumber.isEmpty
@@ -153,6 +156,8 @@ final class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     private func createChatViewController() -> UIViewController {
         let model = ChatPresentationModel()
         let controller = ChatViewController(model: model)
+        model.delegate = controller
+        model.getHistory()
         return controller
     }
     

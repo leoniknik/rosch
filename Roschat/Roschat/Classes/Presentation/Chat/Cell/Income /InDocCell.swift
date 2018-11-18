@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Kingfisher
 
 class InDocCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var docImage: UIImageView!
+    
+    var model: ViewDto!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,4 +29,22 @@ class InDocCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func config(model: ChatDocMessageModel) {
+        if model.view.type == .url {
+            var urlModel = model.view as! UrlViewDto
+            titleLabel.text = urlModel.text
+            docImage.kf.setImage(with: URL(string: urlModel.image)!)
+        }
+        if model.view.type == .doc {
+            var docModel = model.view as! DocViewDto
+            titleLabel.text = docModel.text
+        }
+    }
+    
+    var openFormAction: ((ChatFormMessageModel)->())?
+    var modelForm: ChatFormMessageModel?
+    func config(model: ChatFormMessageModel) {
+        titleLabel.text = "Форма номер \(model.form.id)"
+        docImage.image = UIImage(named: "group")
+    }
 }
