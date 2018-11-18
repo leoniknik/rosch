@@ -25,7 +25,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Настройка"
+        navigationItem.title = "Настройки"
         setupNavBar()
         addBackButton()
         setupUI()
