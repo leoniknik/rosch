@@ -54,6 +54,9 @@
                                     <constraint firstAttribute="height" constant="40" id="Huz-Kg-qSh"/>
                                 </constraints>
                                 <state key="normal" title="Установлен"/>
+                                <connections>
+                                    <action selector="selectTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="i1z-Ww-Kxe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,9 +88,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="avatarView" destination="IqS-NG-9rH" id="yQ3-Fn-HT9"/>
+                <outlet property="background" destination="Jeb-Fd-I2q" id="D5X-MX-oKQ"/>
                 <outlet property="infoLabel" destination="NbJ-8d-loU" id="atn-TN-lXG"/>
                 <outlet property="selectButton" destination="nyD-lJ-8OE" id="Ybf-2z-b1H"/>
                 <outlet property="titleLabel" destination="lTg-bv-BdL" id="y5X-am-fna"/>
+                <outlet property="topView" destination="T9K-Ab-IHW" id="FrG-kg-vxY"/>
             </connections>
             <point key="canvasLocation" x="136.80000000000001" y="71.064467766116948"/>
         </tableViewCell>

@@ -38,7 +38,7 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func styleTapped(_ sender: Any) {
-        var viewcontroller = StyleViewController()
+        let viewcontroller = StyleViewController()
         navigationController?.pushViewController(viewcontroller, animated: true)
     }
 }

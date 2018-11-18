@@ -27,6 +27,7 @@ class StyleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        addBackButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,15 +44,16 @@ class StyleViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         
         tableView.register(UINib(nibName: styleCellId, bundle: nil), forCellReuseIdentifier: styleCellId)
-        
     }
     
-    func createStyleField(_ tableView: UITableView, model: StyleViewModel) -> UITableViewCell {
+    func createStyleField(_ tableView: UITableView, model: StyleViewModel, indexPath: IndexPath) -> UITableViewCell {
         guard
             let cell = tableView.dequeueReusableCell(withIdentifier: styleCellId) as? StyleCell
             else { return UITableViewCell() }
         
         cell.configure(model: model)
+        cell.delegate = self
+        cell.id = indexPath.row
         cell.selectionStyle = .none
         return cell
     }
@@ -64,6 +66,18 @@ extension StyleViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return createStyleField(tableView, model: model.styles[indexPath.row])
+        return createStyleField(tableView, model: model.styles[indexPath.row], indexPath: indexPath)
+    }
+}
+
+extension StyleViewController: StyleCellDelegate {
+    func styleTapped(id: Int) {
+        model.styles[id].selected = true
+        for (index, _) in model.styles.enumerated() {
+            if index != id {
+                model.styles[index].selected = false
+            }
+        }
+        tableView.reloadData()
     }
 }

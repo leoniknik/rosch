@@ -21,17 +21,11 @@ final class UserService {
         self.tokenService = tokenService
     }
     
-    func authUser(cardNumber: String, completion: UserCompletion) {
+    func authUser(cardNumber: String, completion: AuthUserCompletion) {
         let config = AuthCardConfig(cardNumber: cardNumber)
-        requestSender.request(config: config) { [weak self] (result) in
-            guard let `self` = self else { return }
-            switch result {
-            case .success(let result):
-                self.authByOtp(otp: result.otp, cardNumber: cardNumber, completion: completion)
-            case .error:
-                DispatchQueue.main.async {
-                    completion?(Result.error("Ошибка"))
-                }
+        requestSender.request(config: config) { (result) in
+            DispatchQueue.main.async {
+                completion?(result)
             }
         }
     }
@@ -39,16 +33,10 @@ final class UserService {
     func authByOtp(otp: Int, cardNumber: String, completion: UserCompletion) {
         let config = AuthCardConfigByOtp(otp: otp, cardNumber: cardNumber)
         requestSender.request(config: config) { (result) in
-            switch result {
-            case .success:
-                DispatchQueue.main.async {
-                    completion?(result)
-                }
-            case .error:
-                DispatchQueue.main.async {
-                    completion?(Result.error("Ошибка"))
-                }
+            DispatchQueue.main.async {
+                completion?(result)
             }
         }
     }
+    
 }

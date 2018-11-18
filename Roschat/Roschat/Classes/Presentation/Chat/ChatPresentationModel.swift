@@ -75,7 +75,7 @@ class ChatPresentationModel {
                 if !historyDto.complited {
                     fatalError()
                 } else {
-                    var botMessage = historyDto.botMessage
+                    _ = historyDto.botMessage
                     messages.append(contentsOf: getMessageModels(historyDto: historyDto))
                 }
             }
@@ -88,7 +88,7 @@ class ChatPresentationModel {
             lastHistoryDto.userMessage = answerBuffer
             lastHistoryDto.userTime = 0
         }
-        var newHistoryDto = HistoryDto(id: botMessage.id, botTime: 0, botMessage: botMessage)
+        let newHistoryDto = HistoryDto(id: botMessage.id, botTime: 0, botMessage: botMessage)
         currentDialogState = botMessage
         historyDtos.append(newHistoryDto)
         configForDialogState()
@@ -99,7 +99,7 @@ class ChatPresentationModel {
     }
     
     func getMessageModels(historyDto: HistoryDto) -> [ChatMessageModel] {
-        var botMessage = historyDto.botMessage
+        let botMessage = historyDto.botMessage
         var botMessages = [ChatMessageModel]()
         
         botMessages.append(ChatTextMessageModel(text: botMessage.getMessage()))
@@ -121,7 +121,7 @@ class ChatPresentationModel {
             for view in views {
                 switch view.type {
                 case .doc, .photo, .url:
-                    var docModel = ChatDocMessageModel(view: view)
+                    let docModel = ChatDocMessageModel(view: view)
                     switch view.type {
                     case .doc:
                         docModel.type = .inDoc

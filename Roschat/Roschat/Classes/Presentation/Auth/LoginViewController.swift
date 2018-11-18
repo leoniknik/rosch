@@ -12,6 +12,7 @@ import RxCocoa
 import RxSwift
 import NVActivityIndicatorView
 import SafariServices
+import SwiftMessages
 
 final class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     
@@ -36,6 +37,9 @@ final class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     private var disposeBag = DisposeBag()
     private var cardNumberSubject = PublishSubject<String>()
     private var activity: NVActivityIndicatorView!
+    
+    var otp: Int = 0
+    var cardNumber: String = ""
 
     init(model: LoginPresentationModel) {
         self.model = model
@@ -117,8 +121,8 @@ final class LoginViewController: UIViewController, NVActivityIndicatorViewable {
         NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData, nil)
         ServiceLayer.shared.userService.authUser(cardNumber: cardNumber) { [weak self] result in
             switch result {
-            case .success(let user):
-                self?.openChat(user: user)
+            case .success(let otp):
+                self?.showPush(otp: otp.otp, cardNumber: cardNumber)
             case .error:
                 print("login error")
             }
@@ -126,7 +130,7 @@ final class LoginViewController: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
-    private func openChat(user: User) {
+    private func openChat() {
         guard
             let appDelegate = UIApplication.shared.delegate as? AppDelegate,
             let window = appDelegate.window
@@ -138,8 +142,6 @@ final class LoginViewController: UIViewController, NVActivityIndicatorViewable {
         navController.viewControllers.append(controller)
         window.rootViewController = navController
         window.makeKeyAndVisible()
-        
-        TokenService.accessToken = user.accessToken
     }
     
     private func setupNavigationViewController() -> UINavigationController {
@@ -152,6 +154,39 @@ final class LoginViewController: UIViewController, NVActivityIndicatorViewable {
         let model = ChatPresentationModel()
         let controller = ChatViewController(model: model)
         return controller
+    }
+    
+
+    func showPush(otp: Int, cardNumber: String) {
+        let warning = MessageView.viewFromNib(layout: .cardView)
+        warning.configureTheme(.warning)
+        warning.configureDropShadow()
+        
+        let iconText = "😎"
+        warning.configureContent(title: "Сообщение", body: "Ваш код для входа в приложение", iconText: iconText)
+        warning.button?.isHidden = false
+        warning.button?.setTitle("\(otp)", for: .normal)
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(authByOtp))
+        warning.button?.addGestureRecognizer(gesture)
+        var warningConfig = SwiftMessages.defaultConfig
+        warningConfig.duration = .forever
+        warningConfig.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
+        self.otp = otp
+        self.cardNumber = cardNumber
+        SwiftMessages.show(config: warningConfig, view: warning)
+    }
+    
+    @objc func authByOtp() {
+        ServiceLayer.shared.userService.authByOtp(otp: otp, cardNumber: cardNumber) { [weak self] (result) in
+            switch result {
+            case .success(let user):
+                TokenService.accessToken = user.accessToken
+                self?.openChat()
+            case .error:
+                print("ошибка")
+            }
+            SwiftMessages.hide()
+        }
     }
 
 }
